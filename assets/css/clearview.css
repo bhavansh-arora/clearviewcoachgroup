@@ -342,3 +342,8 @@ button.topic { cursor: pointer; }
 .curtain.is-covering .curtain__cols--wine i:nth-child(3) { transition-delay: .12s; }
 .curtain.is-covering .curtain__cols--wine i:nth-child(4) { transition-delay: .18s; }
 .curtain.is-covering .curtain__cols--wine i:nth-child(5) { transition-delay: .24s; }
+
+/* Header: when hidden, clear the screen completely (incl. under the iPhone
+   status bar / notch) and fade out, so no edge of the bar can peek through. */
+.site-header { transition: transform .7s var(--ease), opacity .45s ease, visibility 0s; }
+.site-header.is-hidden { transform: translateY(calc(-100% - var(--frame) - 24px - env(safe-area-inset-top, 0px))); opacity: 0; visibility: hidden; transition: transform .7s var(--ease), opacity .35s ease, visibility 0s linear .7s; }

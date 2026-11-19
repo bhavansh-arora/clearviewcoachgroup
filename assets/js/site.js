@@ -78,11 +78,15 @@
     var y = window.scrollY;
     if (header) {
       header.classList.toggle("is-scrolled", y > 40);
-      var goingDown = y > lastY && y > 400;
-      if (!body.classList.contains("menu-open")) header.classList.toggle("is-hidden", goingDown);
+      /* Hide on a deliberate scroll down, show on a deliberate scroll up.
+         Small jitters (iOS momentum settling, rubber-banding) are ignored. */
+      var delta = y - lastY;
+      if (body.classList.contains("menu-open") || y < 80) header.classList.remove("is-hidden");
+      else if (delta > 6) header.classList.add("is-hidden");
+      else if (delta < -10) header.classList.remove("is-hidden");
       header.classList.toggle("on-dark", darkUnderHeader());
     }
-    lastY = y;
+    if (Math.abs(y - lastY) > 6 || y < 80) lastY = y;
     ticking = false;
   }
   window.addEventListener("scroll", function () {
