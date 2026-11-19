@@ -8,7 +8,7 @@ Hi Jane,
 
 Thanks for saying yes. Rather than send a list of ideas, we built them out using Clearview's own content, photos, fees and reviews, so you can click through and see how they'd work for a senior professional landing on your site.
 
-**Here's the preview:** [PREVIEW LINK]
+**Here's the preview:** https://clearviewcoachgroup.codebunny.net
 
 It works on phones, tablets and desktop. Here's what we added and how each piece helps:
 
@@ -40,7 +40,7 @@ Code Bunny
 ---
 
 ### Before sending, check (or adjust on the site)
-- **Preview link:** replace [PREVIEW LINK] with wherever this repo is deployed. The canonical and social-share URLs assume `clearview.codebunny.net`; if it lives elsewhere, change `SITE_URL` in `_src/build.py` and the URLs in `_src/partials/layout.html`, then rebuild.
+- **Preview link:** the email points to https://clearviewcoachgroup.codebunny.net (the repo's CNAME). Open it once before sending to check the GitHub Pages deploy has finished.
 - **Career Crisis Clinic fee:** Clearview's Executive page lists it at €395 and the Career page at €545. The preview shows "from €395" everywhere; confirm with Jane.
 - **Interview page listing:** Clearview's "Presentation Skills Coaching" entry on the Interview page repeats the Crisis Clinic text and €545, which looks like a copy error. We left it off the Interview page; Presentation Skills (from €495) appears on the Executive page.
 - **"Signature" badges:** we tagged Leadership & Executive Coaching and Interview Coaching for Leaders as signature programmes. Remove the `prog--featured` class if Jane prefers otherwise.
