@@ -325,3 +325,8 @@ button.topic { cursor: pointer; }
 /* Coloured cards keep their colour inside beige panels */
 .paper-2 .card--dark, .blush .card--dark { background: var(--wine); }
 .paper-2 .card--rose, .blush .card--rose { background: var(--gold-light); }
+
+/* Footer wordmark: per-letter animation */
+.footer__word .fw-l { display: inline-block; will-change: transform; transform-origin: 50% 85%; }
+.footer__word em .fw-l { padding-right: .02em; }
+.footer__word { cursor: default; }

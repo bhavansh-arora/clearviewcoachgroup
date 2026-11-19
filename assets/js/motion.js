@@ -318,7 +318,13 @@
         var pin = method.querySelector(".method__pin");
         var track = method.querySelector(".method__track");
         var bar = method.querySelector(".method__progress i");
-        var distance = function () { return Math.max(0, track.scrollWidth - window.innerWidth); };
+        var distance = function () {
+          var last = track.lastElementChild;
+          if (!last) return 0;
+          var pad = parseFloat(getComputedStyle(track).paddingLeft) || 0;
+          var extent = last.getBoundingClientRect().right - track.getBoundingClientRect().left + pad;
+          return Math.max(0, extent - method.clientWidth);
+        };
         gsap.to(track, {
           x: function () { return -distance(); }, ease: "none",
           scrollTrigger: {
@@ -352,7 +358,47 @@
 
   /* ---------- Global, once: footer + rose art outside page content ---------- */
   var word = document.querySelector(".footer__word");
-  if (word) gsap.fromTo(word, { yPercent: 40, opacity: 0 }, { yPercent: 0, opacity: 1, ease: "expo.out", duration: 1.6, scrollTrigger: { trigger: word, start: "top 98%", once: true } });
+  if (word) {
+    (function split(node) {
+      Array.prototype.slice.call(node.childNodes).forEach(function (child) {
+        if (child.nodeType === 3) {
+          var frag = document.createDocumentFragment();
+          child.textContent.split("").forEach(function (c) {
+            if (!c.trim()) return;
+            var s = document.createElement("span"); s.className = "fw-l"; s.textContent = c; frag.appendChild(s);
+          });
+          node.replaceChild(frag, child);
+        } else if (child.nodeType === 1) split(child);
+      });
+    })(word);
+    var sans = $$(":scope > .fw-l", word);
+    var serif = $$("em .fw-l", word);
+    var all = $$(".fw-l", word);
+    gsap.set(sans, { yPercent: 75, rotate: -7, autoAlpha: 0 });
+    gsap.set(serif, { yPercent: 35, scale: 1.18, autoAlpha: 0, filter: "blur(18px)" });
+    var intro = gsap.timeline({ paused: true, onComplete: function () { gsap.set(serif, { clearProps: "filter" }); word.classList.add("is-live"); } });
+    intro.to(sans, { yPercent: 0, rotate: 0, autoAlpha: 1, duration: 1.5, ease: "expo.out", stagger: 0.06 }, 0)
+         .to(serif, { yPercent: 0, scale: 1, autoAlpha: 1, filter: "blur(0px)", duration: 1.8, ease: "expo.out", stagger: 0.09 }, 0.35);
+    ST.create({ trigger: word, start: "top 96%", once: true, onEnter: function () { intro.play(); } });
+
+    /* Cursor wave (desktop pointer) */
+    if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      var lift = all.map(function (l) { return gsap.quickTo(l, "yPercent", { duration: 0.6, ease: "power3.out" }); });
+      var tilt = all.map(function (l) { return gsap.quickTo(l, "rotate", { duration: 0.6, ease: "power3.out" }); });
+      word.addEventListener("mousemove", function (e) {
+        if (!word.classList.contains("is-live")) return;
+        all.forEach(function (l, i) {
+          var r = l.getBoundingClientRect();
+          var dx = e.clientX - (r.left + r.width / 2);
+          var f = Math.max(0, 1 - Math.abs(dx) / (r.height * 0.9));
+          f = f * f * (3 - 2 * f);
+          lift[i](-16 * f);
+          tilt[i](dx > 0 ? -5 * f : 5 * f);
+        });
+      });
+      word.addEventListener("mouseleave", function () { all.forEach(function (l, i) { lift[i](0); tilt[i](0); }); });
+    }
+  }
 
   window.ARMotion = { init: init, destroy: destroy, refresh: function () { ST.refresh(); placeSwashes(); } };
 
