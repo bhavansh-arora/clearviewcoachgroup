@@ -345,11 +345,13 @@ button.topic { cursor: pointer; }
 
 /* Header: when hidden, clear the screen completely (incl. under the iPhone
    status bar / notch) and fade out, so no edge of the bar can peek through. */
-.site-header { top: calc(var(--frame) + 8px + env(safe-area-inset-top, 0px)); transition: transform .7s var(--ease), opacity .45s ease, visibility 0s; }
+.site-header { top: calc(var(--frame) + 8px + env(safe-area-inset-top, 0px)); transition: transform .65s cubic-bezier(.22, 1, .36, 1), opacity .25s ease, visibility 0s; }
 /* iOS Safari keeps painting page content under the status bar, above the
    top of the page, so "just off the top" is still visible there. Hidden
    means: far up (well past that zone), transparent and visibility hidden. */
-.site-header.is-hidden { transform: translate3d(0, calc(-100% - 180px - env(safe-area-inset-top, 0px)), 0) !important; opacity: 0 !important; visibility: hidden; pointer-events: none; transition: transform .6s var(--ease), opacity .25s ease, visibility 0s linear .6s; }
+/* Slide: an even ease so the movement is visible (~0.55s to clear the top),
+   then fade only at the end, while it sits behind the iPhone status bar. */
+.site-header.is-hidden { transform: translate3d(0, calc(-100% - var(--frame) - 30px - env(safe-area-inset-top, 0px)), 0) !important; opacity: 0 !important; visibility: hidden; pointer-events: none; transition: transform .6s cubic-bezier(.45, 0, .25, 1), opacity .2s linear .45s, visibility 0s linear .65s; }
 .site-header.is-hidden .header-bar { box-shadow: none; }
 /* iPhone: the header sits below the status bar, so push page tops and the
    open menu down by the same safe-area amount (0 on other devices). */
