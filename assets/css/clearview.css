@@ -345,5 +345,21 @@ button.topic { cursor: pointer; }
 
 /* Header: when hidden, clear the screen completely (incl. under the iPhone
    status bar / notch) and fade out, so no edge of the bar can peek through. */
-.site-header { transition: transform .7s var(--ease), opacity .45s ease, visibility 0s; }
-.site-header.is-hidden { transform: translateY(calc(-100% - var(--frame) - 24px - env(safe-area-inset-top, 0px))); opacity: 0; visibility: hidden; transition: transform .7s var(--ease), opacity .35s ease, visibility 0s linear .7s; }
+.site-header { top: calc(var(--frame) + 8px + env(safe-area-inset-top, 0px)); transition: transform .7s var(--ease), opacity .45s ease, visibility 0s; }
+/* iOS Safari keeps painting page content under the status bar, above the
+   top of the page, so "just off the top" is still visible there. Hidden
+   means: far up (well past that zone), transparent and visibility hidden. */
+.site-header.is-hidden { transform: translate3d(0, calc(-100% - 180px - env(safe-area-inset-top, 0px)), 0) !important; opacity: 0 !important; visibility: hidden; pointer-events: none; transition: transform .6s var(--ease), opacity .25s ease, visibility 0s linear .6s; }
+.site-header.is-hidden .header-bar { box-shadow: none; }
+/* iPhone: the header sits below the status bar, so push page tops and the
+   open menu down by the same safe-area amount (0 on other devices). */
+.hv { padding-top: calc(64px + var(--frame) + 36px + env(safe-area-inset-top, 0px)); }
+.page-hero { padding-top: calc(64px + var(--frame) + 40px + env(safe-area-inset-top, 0px)); }
+.menu__inner { padding-top: calc(120px + env(safe-area-inset-top, 0px)); }
+.notfound { padding-top: calc(140px + env(safe-area-inset-top, 0px)); }
+@media (max-width: 1024px) { .hv { padding-top: calc(64px + var(--frame) + 30px + env(safe-area-inset-top, 0px)); } }
+@media (max-width: 760px) {
+  .hv { padding-top: calc(58px + var(--frame) + 28px + env(safe-area-inset-top, 0px)); }
+  .menu__inner { padding-top: calc(84px + env(safe-area-inset-top, 0px)); }
+}
+@media (max-width: 760px) and (max-height: 700px) { .menu__inner { padding-top: calc(76px + env(safe-area-inset-top, 0px)); } }
