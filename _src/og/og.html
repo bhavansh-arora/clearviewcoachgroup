@@ -1,18 +1,70 @@
-<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../assets/css/fonts.css"><style>
-html,body{margin:0;width:1200px;height:630px;overflow:hidden;background:#120c22;font-family:"Inter Tight",sans-serif;color:#f6f3ee}
-.g1{position:absolute;width:900px;height:900px;left:-300px;top:-520px;border-radius:50%;background:radial-gradient(circle,rgba(0,94,114,.8),transparent 65%);filter:blur(30px)}
-.g2{position:absolute;width:700px;height:700px;right:180px;bottom:-460px;border-radius:50%;background:radial-gradient(circle,rgba(255,106,43,.45),transparent 62%);filter:blur(30px)}
-.wrap{position:absolute;inset:0;padding:64px 70px;display:flex;flex-direction:column;justify-content:space-between;width:760px}
-.brand{display:flex;align-items:center;gap:16px}.brand svg{width:64px;color:#f6f3ee}.brand span{font-family:"Instrument Serif";font-size:30px;letter-spacing:.22em}
-h1{margin:0;font-family:Archivo;font-weight:800;font-stretch:112%;font-size:92px;line-height:.9;letter-spacing:-.055em}
-h1 em{font-family:"Instrument Serif";font-weight:400;font-stretch:100%;color:#ff6a2b;letter-spacing:-.02em;font-size:1.06em}
-p{margin:0;font-size:22px;color:rgba(246,243,238,.7)}p b{color:#f6f3ee;font-weight:600}
-.photo{position:absolute;right:60px;top:60px;width:330px;height:510px;border-radius:200px 200px 32px 32px;overflow:hidden}
-.photo img{width:100%;height:100%;object-fit:cover}
-.chip{position:absolute;right:300px;bottom:90px;background:#f6f3ee;color:#120c22;border-radius:999px;padding:14px 22px;font-size:18px;font-weight:600;box-shadow:0 20px 40px rgba(0,0,0,.4)}
-</style></head><body><div class="g1"></div><div class="g2"></div>
-<div class="photo"><img src="../../assets/img/jane-door.webp"></div>
-<div class="chip">★ 4.8 Google · 22 years · 6 awards</div>
-<div class="wrap"><div class="brand"><svg viewBox="0 0 250 170"><defs><mask id="m1" maskUnits="userSpaceOnUse" x="0" y="0" width="250" height="170"><rect width="250" height="170" fill="#fff"/><circle cx="165" cy="85" r="74" fill="none" stroke="#000" stroke-width="15"/></mask><mask id="m2" maskUnits="userSpaceOnUse" x="0" y="0" width="250" height="170"><rect width="250" height="170" fill="#fff"/><circle cx="85" cy="85" r="84" fill="#000"/></mask></defs><circle cx="85" cy="85" r="84" fill="currentColor" mask="url(#m1)"/><circle cx="165" cy="85" r="74" fill="none" stroke="#ff6a2b" stroke-width="10" mask="url(#m2)"/></svg><span>CLEARVIEW</span></div>
-<h1>Bring your career into <em>clear view.</em></h1>
-<p><b>Executive, career &amp; interview coaching</b> · Dublin 2 · Since 2004</p></div></body></html>
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- Source for the social share image (1200 × 630). Render it with a headless
+     browser at 1200 × 630 and save as assets/img/og-clearview-2026.jpg. -->
+<link rel="stylesheet" href="../../assets/css/fonts.css">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body { position: relative; font-family: "Inter Tight", sans-serif; color: #f4f0e9; background: radial-gradient(70% 90% at 58% 100%, #34296c 0%, #221a44 52%, #140e2a 100%); }
+  .mesh i { position: absolute; border-radius: 50%; filter: blur(70px); }
+  .mesh i:nth-child(1) { width: 520px; height: 520px; left: -160px; top: -220px; background: #3a2c78; opacity: .7; }
+  .mesh i:nth-child(2) { width: 460px; height: 460px; right: -140px; bottom: -200px; background: #2b2160; opacity: .8; }
+  .mesh i:nth-child(3) { width: 360px; height: 360px; left: 470px; top: 60px; background: #b8643a; opacity: .22; }
+  .dots { position: absolute; inset: 0; background-image: radial-gradient(rgba(242,178,122,.16) 1.3px, transparent 1.4px); background-size: 22px 22px; -webkit-mask-image: radial-gradient(70% 70% at 55% 45%, #000, transparent); }
+  .rings i { position: absolute; left: 740px; top: 690px; border-radius: 50%; border: 1px solid rgba(242,178,122,.18); transform: translate(-50%, -50%); }
+  .rings i:nth-child(1) { width: 820px; height: 820px; }
+  .rings i:nth-child(2) { width: 600px; height: 600px; border-style: dashed; border-color: rgba(242,178,122,.14); }
+  .rings i:nth-child(3) { width: 1180px; height: 1180px; border-color: rgba(242,178,122,.09); }
+
+  .brand { position: absolute; left: 56px; top: 48px; z-index: 6; display: flex; align-items: center; gap: 12px; padding: 8px 20px 8px 8px; border-radius: 999px; background: rgba(251,249,245,.92); color: #14101f; }
+  .brand .mono { width: 48px; height: 48px; border-radius: 50%; background: #221a44; display: grid; place-items: center; }
+  .brand .mono svg { width: 30px; color: #f2b27a; }
+  .brand b { display: block; font-family: "Bricolage Grotesque"; font-weight: 600; font-size: 24px; letter-spacing: -.035em; line-height: 1; }
+  .brand b em { font-family: "Instrument Serif"; font-weight: 400; font-size: 1.15em; color: #0b6476; }
+  .brand small { display: block; margin-top: 4px; font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: #605a6e; }
+
+  .pre { position: absolute; left: 56px; top: 132px; z-index: 2; font-family: "Bricolage Grotesque"; font-weight: 600; font-size: 76px; line-height: .92; letter-spacing: -.055em; }
+  .giant { position: absolute; z-index: 1; left: 760px; top: 318px; transform: translate(-50%, -50%); font-family: "Instrument Serif"; font-style: italic; font-size: 330px; line-height: .8; letter-spacing: -.04em; color: #f2b27a; text-shadow: 0 30px 80px rgba(10,7,22,.4); white-space: nowrap; }
+  .jane { position: absolute; z-index: 3; left: 760px; bottom: -6px; height: 560px; transform: translateX(-50%); filter: drop-shadow(0 34px 50px rgba(10,7,22,.6)); }
+  .post { position: absolute; z-index: 5; right: 56px; top: 330px; font-family: "Bricolage Grotesque"; font-weight: 600; font-size: 76px; line-height: .9; letter-spacing: -.055em; }
+
+  .sticker { position: absolute; z-index: 6; left: 568px; top: 330px; width: 124px; height: 124px; border-radius: 50%; display: grid; place-items: center; text-align: center; background: #f2b27a; color: #140e2a; transform: rotate(-12deg); box-shadow: 0 18px 40px -16px rgba(10,7,22,.6); }
+  .sticker::before { content: ""; position: absolute; inset: 6px; border-radius: 50%; border: 1.5px dashed rgba(20,14,42,.35); }
+  .sticker b { display: block; font-family: "Bricolage Grotesque"; font-weight: 700; font-size: 30px; line-height: .9; letter-spacing: -.05em; }
+  .sticker span { display: block; margin-top: 4px; font-family: "Instrument Serif"; font-style: italic; font-size: 15px; line-height: 1.05; }
+
+  .glass { position: absolute; z-index: 6; border-radius: 22px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); backdrop-filter: blur(14px); }
+  .proof { left: 56px; bottom: 50px; width: 452px; padding: 20px 22px; }
+  .proof .row { display: flex; align-items: center; gap: 14px; }
+  .proof .g { width: 46px; height: 46px; border-radius: 50%; background: #fbf9f5; display: grid; place-items: center; flex: none; }
+  .proof .g svg { width: 24px; height: 24px; }
+  .proof b { font-family: "Bricolage Grotesque"; font-weight: 600; font-size: 34px; letter-spacing: -.05em; line-height: 1; }
+  .proof .stars { color: #f2b27a; font-size: 16px; letter-spacing: 2px; margin-left: 6px; }
+  .proof p { margin: 12px 0 0; font-size: 17px; line-height: 1.35; color: rgba(244,240,233,.8); }
+  .proof p strong { color: #f4f0e9; font-weight: 600; }
+  .tag { right: 56px; bottom: 50px; padding: 16px 20px; font-size: 16px; font-weight: 600; letter-spacing: .02em; color: rgba(244,240,233,.88); display: flex; align-items: center; gap: 10px; }
+  .tag i { width: 9px; height: 9px; border-radius: 50%; background: #f2b27a; box-shadow: 0 0 0 4px rgba(242,178,122,.2); }
+</style></head>
+<body>
+  <svg width="0" height="0" style="position:absolute"><defs>
+    <mask id="m1" maskUnits="userSpaceOnUse" x="0" y="0" width="250" height="170"><rect width="250" height="170" fill="#fff"/><circle cx="165" cy="85" r="74" fill="none" stroke="#000" stroke-width="15"/></mask>
+    <mask id="m2" maskUnits="userSpaceOnUse" x="0" y="0" width="250" height="170"><rect width="250" height="170" fill="#fff"/><circle cx="85" cy="85" r="84" fill="#000"/></mask>
+  </defs></svg>
+  <div class="mesh"><i></i><i></i><i></i></div>
+  <div class="dots"></div>
+  <div class="rings"><i></i><i></i><i></i></div>
+
+  <div class="brand"><span class="mono"><svg viewBox="0 0 250 170"><circle cx="85" cy="85" r="84" fill="currentColor" mask="url(#m1)"/><circle cx="165" cy="85" r="74" fill="none" stroke="currentColor" stroke-width="10" mask="url(#m2)"/></svg></span><span><b>Clear<em>view</em></b><small>Coaching Group · Dublin</small></span></div>
+
+  <div class="pre">Bring your<br>career into</div>
+  <div class="giant">clear</div>
+  <img class="jane" src="../../assets/img/jane-cut.webp" alt="">
+  <div class="post">view.</div>
+  <div class="sticker"><div><b>Top 10</b><span>MSN Trailblazing<br>Women 2026</span></div></div>
+
+  <div class="glass proof">
+    <div class="row"><span class="g"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.2-2.1 3.5-5.1 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6h-4a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.8 3.6-4.9 6.7-4.9z"/></svg></span><span><b>4.8</b><span class="stars">★★★★★</span></span></div>
+    <p><strong>22 years</strong> in Dublin · <strong>23,000+</strong> coaching hours · <strong>6</strong> awards</p>
+  </div>
+  <div class="glass tag"><i></i>Executive · Career · Interview coaching</div>
+</body></html>
