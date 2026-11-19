@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{page.title}}</title>
+  <meta name="description" content="{{page.description}}">
+  <link rel="canonical" href="{{page.canonical}}">
+  <meta name="theme-color" content="#120c22">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Clearview Coaching Group">
+  <meta property="og:title" content="{{page.title}}">
+  <meta property="og:description" content="{{page.description}}">
+  <meta property="og:url" content="{{page.canonical}}">
+  <meta property="og:locale" content="en_IE">
+  <meta property="og:image" content="https://clearview.codebunny.net/{{page.og_image}}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Clearview Coaching Group: bring your career into clear view.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{page.title}}">
+  <meta name="twitter:description" content="{{page.description}}">
+  <meta name="twitter:image" content="https://clearview.codebunny.net/{{page.og_image}}">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-tight-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>
+    (function(d){d.classList.add('js');try{var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;if(!rm&&!sessionStorage.getItem('cv_seen')){d.classList.add('is-loading')}sessionStorage.setItem('cv_seen','1')}catch(e){}})(document.documentElement);
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Clearview Coaching Group",
+    "url": "https://clearview.codebunny.net/",
+    "image": "https://clearview.codebunny.net/assets/img/og-clearview.jpg",
+    "logo": "https://clearview.codebunny.net/assets/img/icon-512.png",
+    "telephone": "+353-1-234-3766",
+    "email": "jane@clearviewcoachgroup.com",
+    "foundingDate": "2004",
+    "address": { "@type": "PostalAddress", "streetAddress": "Suite 11247, 26/27 Upper Pembroke Street", "addressLocality": "Dublin 2", "postalCode": "D02 X361", "addressCountry": "IE" },
+    "areaServed": ["Dublin", "Ireland", "Worldwide (online)"],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "24", "bestRating": "5" },
+    "founder": { "@type": "Person", "name": "Jane Downes", "jobTitle": "Founder & Career Coach", "sameAs": ["https://www.linkedin.com/in/jane-downes-2ba4751/"] },
+    "sameAs": ["https://www.linkedin.com/company/clearview-coaching-group", "https://www.instagram.com/clearviewcoachgroup/"]
+  }
+  </script>
+</head>
+<body data-page="{{page.nav}}">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <mask id="cv-m1" maskUnits="userSpaceOnUse" x="0" y="0" width="250" height="170"><rect width="250" height="170" fill="#fff"/><circle cx="165" cy="85" r="74" fill="none" stroke="#000" stroke-width="15"/></mask>
+      <mask id="cv-m2" maskUnits="userSpaceOnUse" x="0" y="0" width="250" height="170"><rect width="250" height="170" fill="#fff"/><circle cx="85" cy="85" r="84" fill="#000"/></mask>
+    </defs>
+    <symbol id="cv-mark" viewBox="0 0 250 170">
+      <circle cx="85" cy="85" r="84" fill="currentColor" mask="url(#cv-m1)"/>
+      <circle cx="165" cy="85" r="74" fill="none" stroke="currentColor" stroke-width="10" mask="url(#cv-m2)"/>
+    </symbol>
+  </svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__mark"><i class="loader__disc"></i><i class="loader__ring"></i></div>
+      <div class="loader__word"><span>C</span><span>L</span><span>E</span><span>A</span><span>R</span><span>V</span><span>I</span><span>E</span><span>W</span></div>
+      <div class="loader__tag">Bring your career into <em>clear view</em></div>
+    </div>
+    <div class="loader__count"><span>0</span>%</div>
+  </div>
+
+  {{> header}}
+
+  <main id="main">
+{{BODY}}
+  </main>
+
+  {{> footer}}
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/vendor/gsap.min.js" defer></script>
+  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="assets/vendor/lenis.min.js" defer></script>
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

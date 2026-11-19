@@ -1,0 +1,74 @@
+<header class="site-header" data-header>
+    <div class="site-header__bar">
+      <a class="brand" href="index.html" aria-label="Clearview Coaching Group, home">{{mark}}<span class="brand__word">Clearview</span></a>
+
+      <nav class="nav" aria-label="Primary">
+        <div class="nav__drop" data-drop>
+          <button class="nav__link nav__link--btn" type="button" aria-expanded="false" aria-controls="drop-coaching" {{nav:coaching}}>Coaching {{icon:chev}}</button>
+          <div class="drop" id="drop-coaching">
+            <div class="drop__grid">
+              <a class="drop__item" href="executive.html" {{nav:executive}}>
+                <span class="drop__num">01</span>
+                <span class="drop__title">Executive coaching</span>
+                <span class="drop__text">Leaders, directors &amp; board level</span>
+              </a>
+              <a class="drop__item" href="career.html" {{nav:career}}>
+                <span class="drop__num">02</span>
+                <span class="drop__title">Career coaching</span>
+                <span class="drop__text">Change, promotion &amp; direction</span>
+              </a>
+              <a class="drop__item" href="interview.html" {{nav:interview}}>
+                <span class="drop__num">03</span>
+                <span class="drop__title">Interview coaching</span>
+                <span class="drop__text">Walk in ready, at every stage</span>
+              </a>
+              <a class="drop__item" href="organisations.html" {{nav:organisations}}>
+                <span class="drop__num">04</span>
+                <span class="drop__title">For organisations</span>
+                <span class="drop__text">In-house coaching, workshops &amp; keynotes</span>
+              </a>
+            </div>
+            <a class="drop__clinic" href="contact.html?programme=career-crisis-clinic">
+              <span class="drop__clinic-icon">{{icon:bolt}}</span>
+              <span><b>Career Crisis Clinic</b><small>A focused 90-minute career troubleshoot, when it can't wait</small></span>
+              {{icon:arrow}}
+            </a>
+          </div>
+        </div>
+        <a class="nav__link" href="about.html" {{nav:about}}>About</a>
+        <a class="nav__link" href="stories.html" {{nav:stories}}>Client stories</a>
+        <a class="nav__link" href="insights.html" {{nav:insights}}>Insights</a>
+        <a class="nav__link" href="gift.html" {{nav:gift}}>Gift</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="site-header__phone" href="tel:+35312343766" aria-label="Call Clearview on 01 234 3766">{{icon:phone}}<span>01 234 3766</span></a>
+        <a class="btn btn--flame btn--sm site-header__cta" href="contact.html" data-magnetic><span>Book a consultation</span></a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span class="menu-btn__lines"><i></i><i></i></span><span class="menu-btn__label">Menu</span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__inner">
+      <nav class="menu__nav" aria-label="Mobile">
+        <a href="index.html" {{nav:home}}><span>00</span>Home</a>
+        <a href="executive.html" {{nav:executive}}><span>01</span>Executive coaching</a>
+        <a href="career.html" {{nav:career}}><span>02</span>Career coaching</a>
+        <a href="interview.html" {{nav:interview}}><span>03</span>Interview coaching</a>
+        <a href="organisations.html" {{nav:organisations}}><span>04</span>For organisations</a>
+        <a href="about.html" {{nav:about}}><span>05</span>About Clearview</a>
+        <a href="stories.html" {{nav:stories}}><span>06</span>Client stories</a>
+        <a href="insights.html" {{nav:insights}}><span>07</span>Insights &amp; the book</a>
+        <a href="gift.html" {{nav:gift}}><span>08</span>Gift a voucher</a>
+      </nav>
+      <div class="menu__foot">
+        <a class="btn btn--flame" href="contact.html"><span>Book a consultation</span>{{icon:arrow}}</a>
+        <div class="menu__contact">
+          <a href="tel:+35312343766">{{icon:phone}} 01 234 3766</a>
+          <a href="mailto:jane@clearviewcoachgroup.com">{{icon:mail}} jane@clearviewcoachgroup.com</a>
+          <span>{{icon:pin}} Upper Pembroke Street, Dublin 2</span>
+        </div>
+      </div>
+    </div>
+  </div>
