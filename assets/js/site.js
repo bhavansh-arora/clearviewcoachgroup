@@ -96,7 +96,7 @@
      ------------------------------------------------------------------ */
   var lenis = null;
   if (!reduce && window.Lenis && fine) {
-    lenis = new window.Lenis({ duration: 1.1, easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); }, smoothWheel: true });
+    lenis = new window.Lenis({ lerp: 0.085, smoothWheel: true, wheelMultiplier: 0.95 });
     if (gsap) {
       lenis.on("scroll", function () { if (ST) ST.update(); });
       gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
@@ -283,19 +283,23 @@
     // Parallax images
     $$("[data-parallax]").forEach(function (el) {
       var amt = parseFloat(el.getAttribute("data-parallax")) || 10;
-      gsap.fromTo(el, { yPercent: -amt / 2 }, { yPercent: amt / 2, ease: "none", scrollTrigger: { trigger: el.parentElement, start: "top bottom", end: "bottom top", scrub: true } });
+      gsap.fromTo(el, { yPercent: -amt / 2 }, { yPercent: amt / 2, ease: "none", scrollTrigger: { trigger: el.parentElement, start: "top bottom", end: "bottom top", scrub: 0.6 } });
     });
 
     // Manifesto word lighting
     $$(".manifesto__text").forEach(function (el) {
       var words = $$(".mw", el);
-      ST.create({
-        trigger: el, start: "top 80%", end: "bottom 45%", scrub: true,
-        onUpdate: function (self) {
-          var n = Math.round(self.progress * words.length);
-          words.forEach(function (w, i) { w.classList.toggle("on", i < n); });
+      var n = words.length, band = 5, st = { p: 0 };
+      var paint = function () {
+        var x = st.p * (n + band);
+        for (var i = 0; i < n; i++) {
+          var t = Math.min(1, Math.max(0, (x - i) / band));
+          t = t * t * (3 - 2 * t);
+          words[i].style.opacity = (0.18 + 0.82 * t).toFixed(3);
         }
-      });
+      };
+      paint();
+      gsap.to(st, { p: 1, ease: "none", onUpdate: paint, scrollTrigger: { trigger: el, start: "top 82%", end: "bottom 52%", scrub: 0.9 } });
     });
 
     // Service cards: scale back as the next one stacks on top
@@ -304,7 +308,7 @@
       cards.forEach(function (card, i) {
         card.style.setProperty("--i", i);
         if (i === cards.length - 1) return;
-        gsap.to(card, { scale: 0.94, opacity: 0.55, ease: "none", scrollTrigger: { trigger: cards[i + 1], start: "top bottom", end: "top " + (110 + (i + 1) * 18) + "px", scrub: true } });
+        gsap.to(card, { scale: 0.94, opacity: 0.55, ease: "none", scrollTrigger: { trigger: cards[i + 1], start: "top bottom", end: "top " + (110 + (i + 1) * 18) + "px", scrub: 0.5 } });
       });
     }
 
@@ -313,7 +317,7 @@
       var line = $(".steps__line i", wrap);
       var steps = $$(".step", wrap);
       ST.create({
-        trigger: wrap, start: "top 75%", end: "bottom 55%", scrub: true,
+        trigger: wrap, start: "top 75%", end: "bottom 55%", scrub: 0.6,
         onUpdate: function (self) {
           if (line) line.style.setProperty("--p", self.progress);
           steps.forEach(function (s, i) { s.classList.toggle("is-lit", self.progress >= i / steps.length + 0.02); });
@@ -323,7 +327,7 @@
 
     // Big footer word drift
     var fw = $(".footer__word-in");
-    if (fw) gsap.fromTo(fw, { yPercent: 40 }, { yPercent: 0, ease: "none", scrollTrigger: { trigger: fw, start: "top bottom", end: "bottom bottom", scrub: true } });
+    if (fw) gsap.fromTo(fw, { yPercent: 40 }, { yPercent: 0, ease: "none", scrollTrigger: { trigger: fw, start: "top bottom", end: "bottom bottom", scrub: 0.8 } });
 
     // 90-day bars
     $$(".ninety__bar i").forEach(function (bar) {
