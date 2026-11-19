@@ -1,0 +1,86 @@
+<div class="compass" id="lens" data-lens data-theme="dark">
+        <div class="compass__intro">
+          <span class="label">The Clearview Lens</span>
+          <h2 class="h2" data-split>Not sure where <em>to start?</em></h2>
+          <p>Five quick questions, sixty seconds. You'll get the programme, the coach and the investment that fits where you are right now, then send it straight to the team, already filled in.</p>
+          <div class="lens-word" data-lens-word aria-hidden="true">Clear<em>.</em></div>
+          <div class="compass__meta">
+            <span>{{icon:clock}} 60 seconds</span>
+            <span>{{icon:lock}} Nothing sent until you choose</span>
+          </div>
+        </div>
+        <div class="compass__panel" aria-live="polite">
+          <div class="compass__progress" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+          <div class="compass__step" data-key="level">
+            <span class="compass__q">Question 01 / 05</span>
+            <h3>Where are you in your career right now?</h3>
+            <div class="options">
+              <button class="option" type="button" data-val="board"><span class="option__key">A</span>Board or C-suite</button>
+              <button class="option" type="button" data-val="director"><span class="option__key">B</span>Director or senior leader</button>
+              <button class="option" type="button" data-val="manager"><span class="option__key">C</span>Manager or team lead</button>
+              <button class="option" type="button" data-val="career"><span class="option__key">D</span>Early to mid-career professional</button>
+            </div>
+          </div>
+
+          <div class="compass__step" data-key="goal">
+            <span class="compass__q">Question 02 / 05</span>
+            <h3>What's pulling at you most?</h3>
+            <div class="options">
+              <button class="option" type="button" data-val="next"><span class="option__key">A</span>The next big move: promotion or a bigger remit</button>
+              <button class="option" type="button" data-val="new-role"><span class="option__key">B</span>I've just started a new role, or been promoted</button>
+              <button class="option" type="button" data-val="interview"><span class="option__key">C</span>An interview is coming up</button>
+              <button class="option" type="button" data-val="stuck"><span class="option__key">D</span>Something has to change: stuck, bored or undervalued</button>
+            </div>
+            <button class="compass__back" type="button">{{icon:arrow}} Back</button>
+          </div>
+
+          <div class="compass__step" data-key="when">
+            <span class="compass__q">Question 03 / 05</span>
+            <h3>How soon does this need to happen?</h3>
+            <div class="options">
+              <button class="option" type="button" data-val="now"><span class="option__key">A</span>This week. It can't wait.</button>
+              <button class="option" type="button" data-val="month"><span class="option__key">B</span>Within a month</button>
+              <button class="option" type="button" data-val="quarter"><span class="option__key">C</span>In the next few months</button>
+              <button class="option" type="button" data-val="exploring"><span class="option__key">D</span>I'm exploring for now</button>
+            </div>
+            <button class="compass__back" type="button">{{icon:arrow}} Back</button>
+          </div>
+
+          <div class="compass__step" data-key="fund">
+            <span class="compass__q">Question 04 / 05</span>
+            <h3>Who's investing in your development?</h3>
+            <div class="options">
+              <button class="option" type="button" data-val="self"><span class="option__key">A</span>I am: it's a personal investment</button>
+              <button class="option" type="button" data-val="employer"><span class="option__key">B</span>My employer, or I'd like them to</button>
+              <button class="option" type="button" data-val="unsure"><span class="option__key">C</span>Not sure yet</button>
+            </div>
+            <button class="compass__back" type="button">{{icon:arrow}} Back</button>
+          </div>
+
+          <div class="compass__step" data-key="success">
+            <span class="compass__q">Question 05 / 05</span>
+            <h3>Six months from now, what would success look like?</h3>
+            <div class="options">
+              <button class="option" type="button" data-val="clarity"><span class="option__key">A</span>Total clarity on my direction</button>
+              <button class="option" type="button" data-val="role"><span class="option__key">B</span>Landing the role I want</button>
+              <button class="option" type="button" data-val="perform"><span class="option__key">C</span>Performing at a higher level</button>
+              <button class="option" type="button" data-val="confidence"><span class="option__key">D</span>My confidence back</button>
+            </div>
+            <button class="compass__back" type="button">{{icon:arrow}} Back</button>
+          </div>
+
+          <div class="compass__result">
+            <span class="compass__q">Your clear view</span>
+            <h3 class="h3 compass__result-title">Programme</h3>
+            <div class="compass__result-tags"></div>
+            <p class="compass__result-text"></p>
+            <p class="lens-note" hidden>{{icon:shield}}<span></span></p>
+            <div class="btn-row">
+              <a class="btn btn--rose" href="contact.html" data-result-send><span class="btn__label">Send this &amp; book a consultation</span><span class="btn__icon">{{icon:arrow-ur}}</span></a>
+              <a class="link-arrow" href="executive.html" data-result-learn>See the programme {{icon:arrow}}</a>
+            </div>
+            <button class="compass__restart" type="button">Start over</button>
+          </div>
+        </div>
+      </div>

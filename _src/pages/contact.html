@@ -1,154 +1,116 @@
-<!--meta {
-  "title": "Book a Confidential Consultation | Clearview Coaching Group, Dublin 2",
-  "description": "Start with a confidential consultation by phone or video. Tell us where you are in four quick steps and we'll match you with the right coach and programme. 01 234 3766.",
-  "nav": "contact"
-} -->
-    <section class="page-hero page-hero--text is-dark">
-      <div class="page-hero__glow" aria-hidden="true"></div>
-      <div class="container page-hero__inner" style="padding-bottom:clamp(40px,5vw,72px)">
-        <div>
-          <nav class="crumbs" aria-label="Breadcrumb" data-reveal><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Contact</span></nav>
-          <span class="eyebrow" data-reveal>Book a consultation</span>
-          <h1 class="h-mega" data-split style="margin-top:24px;max-width:none">Let's start a<br> <em>conversation.</em></h1>
-          <p class="lead" data-reveal>Tell us a little about where you are, and we'll match you with the right coach and programme. It takes about a minute, and it's completely confidential.</p>
+<!--meta {"title": "Book a Confidential Consultation | Clearview Coaching Group, Dublin 2", "description": "Start with a confidential consultation by phone or video. Tell us where you are in four quick steps and we'll match you with the right coach and programme. 01 234 3766.", "nav": "contact"} -->
+
+    <section class="page-hero">
+      <div class="ph-rose" aria-hidden="true">{{> lensart}}</div><span class="sparkle sparkle--lg" style="right:30%;top:24%" aria-hidden="true">{{icon:spark}}</span><span class="sparkle sparkle--sm" style="right:12%;top:46%" aria-hidden="true">{{icon:spark}}</span><span class="sparkle" style="left:46%;top:30%" aria-hidden="true">{{icon:spark}}</span>
+      <div class="page-hero__num" aria-hidden="true">Hi</div>
+      <div class="container">
+        <nav class="page-hero__crumbs" aria-label="Breadcrumb" data-hero><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Contact</span></nav>
+        <div class="page-hero__grid">
+          <div class="page-hero__title">
+            <span class="label" data-hero>Book a consultation</span>
+            <h1 class="h1 mt-m" data-split>Let's start a <em>conversation.</em></h1>
+          </div>
+          <div class="page-hero__aside" data-hero>
+            <p>Tell us a little about where you are and we'll match you with the right coach and programme. It takes about a minute, and it's completely confidential.</p>
+            <a class="btn btn--rose" href="tel:+35312343766" data-magnetic><span class="btn__label">Or call 01 234 3766</span><span class="btn__icon">{{icon:phone}}</span></a>
+          </div>
         </div>
-        <div class="page-hero__big" aria-hidden="true">Hello</div>
       </div>
     </section>
 
-    <section class="section" style="padding-top:clamp(40px,5vw,72px)">
+    <section class="section">
       <div class="container contact">
-        <aside class="contact__aside">
-          <div class="cinfo" data-reveal>
-            <h2>Prefer to talk?</h2>
-            <a href="tel:+35312343766">{{icon:phone}}<span>01 234 3766<small>Office</small></span></a>
-            <a href="tel:+353863952761">{{icon:phone}}<span>086 395 2761<small>Mobile</small></span></a>
-            <a href="mailto:jane@clearviewcoachgroup.com">{{icon:mail}}<span>jane@clearviewcoachgroup.com<small>Email Jane directly</small></span></a>
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=26%2F27+Upper+Pembroke+Street%2C+Dublin+2%2C+D02+X361" target="_blank" rel="noopener">{{icon:pin}}<span>Suite 11247, 26/27 Upper Pembroke Street, Dublin 2, D02 X361<small>Open in Google Maps</small></span></a>
+        <aside class="contact__side">
+          <div class="contact__card" data-reveal>
+            <div class="contact__line"><i>{{icon:phone}}</i><div><small>Office · Mobile</small><a href="tel:+35312343766">01 234 3766</a> · <a href="tel:+353863952761">086 395 2761</a></div></div>
+            <div class="contact__line"><i>{{icon:mail}}</i><div><small>Email Jane directly</small><a href="mailto:jane@clearviewcoachgroup.com">jane@clearviewcoachgroup.com</a></div></div>
+            <div class="contact__line"><i>{{icon:pin}}</i><div><small>Dublin 2</small><a href="https://www.google.com/maps/search/?api=1&amp;query=26%2F27+Upper+Pembroke+Street%2C+Dublin+2" target="_blank" rel="noopener">26/27 Upper Pembroke Street, D02 X361</a></div></div>
+            <div class="contact__line"><i>{{icon:video}}</i><div><small>Online</small>Phone or video, worldwide</div></div>
           </div>
-          <div class="tile" data-reveal>
-            <span class="tile__icon">{{icon:clock}}</span>
-            <h3>What happens next</h3>
-            <ul class="ticks">
-              <li>{{icon:check}} We reply to confirm a time for a brief exploratory call</li>
-              <li>{{icon:check}} Phone or video, at a time that suits you</li>
-              <li>{{icon:check}} You'll know your coach, programme and investment before anything starts</li>
-            </ul>
+          <div data-reveal>
+            <span class="label">What happens next</span>
+            <ol class="next-steps">
+              <li><span class="next-steps__num">1</span><div><b>You share a little</b><span>Who it's for, what you need, your timing. About a minute.</span></div></li>
+              <li><span class="next-steps__num">2</span><div><b>We reply</b><span>Usually <span data-reply-promise>within one working day</span>, to confirm a time.</span></div></li>
+              <li><span class="next-steps__num">3</span><div><b>Your consultation</b><span>A brief exploratory call by phone or video, before any coaching starts.</span></div></li>
+            </ol>
           </div>
         </aside>
 
-        <div class="form-card" data-enquiry data-reveal>
-          <p class="res__note" data-lens-note hidden style="background:rgba(0,94,114,.08);color:var(--ink)">{{icon:eye}}<span>The Clearview Lens recommended <b></b>. We've filled in what you told us; just add your details.</span></p>
-          <div class="fsteps" aria-hidden="true">
-            <span class="fsteps__i"><span>Who</span></span>
-            <span class="fsteps__i"><span>What</span></span>
-            <span class="fsteps__i"><span>Context</span></span>
-            <span class="fsteps__i"><span>You</span></span>
-          </div>
+        <div class="contact__form">
+          <form class="form" data-enquiry novalidate>
+            <div class="form__body">
+              <div class="form__progress">
+                <div class="form__steps" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+                <span class="form__count">Step 1 of 4</span>
+              </div>
+              <p class="lens-prefill" data-lens-note hidden>{{icon:eye}}<span>The Clearview Lens recommended <b></b>. We've carried over your answers; just add your details.</span></p>
 
-          <div class="fstep">
-            <h2 class="fstep__q">Who is this for?</h2>
-            <p class="fstep__hint">Step 1 of 4</p>
-            <div class="choice-grid choice-grid--3">
-              <button type="button" class="choice" data-group="who" data-val="me" aria-pressed="false"><span class="choice__check">{{icon:check}}</span>{{icon:compass}}<b>Me</b><small>My own career</small></button>
-              <button type="button" class="choice" data-group="who" data-val="org" aria-pressed="false"><span class="choice__check">{{icon:check}}</span>{{icon:users}}<b>My organisation</b><small>Team, leaders or employees</small></button>
-              <button type="button" class="choice" data-group="who" data-val="gift" aria-pressed="false"><span class="choice__check">{{icon:check}}</span>{{icon:gift}}<b>A gift</b><small>Coaching for someone else</small></button>
+              <fieldset class="form__step">
+                <legend>Who is this <em>for?</em></legend>
+                <p class="form__hint">Pick one. You can tell us more in a moment.</p>
+                <div class="choice-grid choice-grid--3" data-require-choice="who">
+                  <label class="choice"><input type="radio" name="who" value="me"><span>Me<small>My own career</small></span></label>
+                  <label class="choice"><input type="radio" name="who" value="org"><span>My organisation<small>Team, leaders or employees</small></span></label>
+                  <label class="choice"><input type="radio" name="who" value="gift"><span>A gift<small>Coaching for someone else</small></span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="form__step">
+                <legend>What can we <em>help with?</em></legend>
+                <p class="form__hint">Choose the closest fit. We'll refine it together.</p>
+                <div class="choice-grid" data-needs data-require-choice="need"></div>
+              </fieldset>
+
+              <fieldset class="form__step">
+                <legend>A little <em>context.</em></legend>
+                <p class="form__hint">This helps us match you with the right coach.</p>
+                <div class="fields">
+                  <div class="field" data-f-level><label for="f-level">Your level</label><select id="f-level" name="level"><option value="">Choose one</option><option value="board">Board / C-suite</option><option value="director">Director / senior leader</option><option value="manager">Manager / team lead</option><option value="career">Early to mid-career</option><option value="student">Student / graduate</option></select></div>
+                  <div class="field" data-f-orgsize hidden><label for="f-size">How many people?</label><select id="f-size" name="org_size"><option value="">Choose one</option><option>1–5 people</option><option>6–20 people</option><option>21–100 people</option><option>100+ people</option></select></div>
+                  <div class="field"><label for="f-timeline">When would you like to start?</label><select id="f-timeline" name="timeline"><option value="">Choose one</option><option value="now">This week</option><option value="month">Within a month</option><option value="quarter">In 1–3 months</option><option value="exploring">Just exploring</option></select></div>
+                  <div class="field" data-f-funding><label for="f-funding">Who's funding it?</label><select id="f-funding" name="funding"><option value="">Choose one</option><option value="self">Self-funded</option><option value="employer">My employer</option><option value="unsure">Not sure yet</option></select></div>
+                  <div class="field"><label for="f-format">Session format</label><select id="f-format" name="format"><option value="either">Online or in person</option><option value="online">Online (video)</option><option value="dublin">In person, Dublin</option></select></div>
+                  <div class="field field--full" data-f-interview hidden><label for="f-interview">Interview date <small>(if you have one)</small></label><input id="f-interview" name="interview_date" type="date"></div>
+                </div>
+              </fieldset>
+
+              <fieldset class="form__step">
+                <legend>Lastly, <em>about you.</em></legend>
+                <p class="form__hint">Your details are only used to reply to this enquiry.</p>
+                <div class="fields">
+                  <div class="field"><label for="f-name">Full name</label><input id="f-name" name="name" type="text" autocomplete="name" required><span class="field__err">Please add your name.</span></div>
+                  <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="field__err">Please add a valid email.</span></div>
+                  <div class="field"><label for="f-phone">Phone <small>(optional)</small></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+                  <div class="field"><label for="f-org">Organisation <small>(optional)</small></label><input id="f-org" name="organisation" type="text" autocomplete="organization"></div>
+                  <div class="field field--full"><label for="f-msg">Anything you'd like us to know? <small>(optional)</small></label><textarea id="f-msg" name="message" placeholder="Where you are now, where you'd like to be, any dates we should know about…"></textarea></div>
+                  <div class="field field--full"><label class="consent"><input type="checkbox" name="consent" required> <span>I'm happy for Clearview to contact me about this enquiry.</span></label><span class="field__err">Please tick to confirm we can reply.</span></div>
+                </div>
+                <div class="summary" data-summary></div>
+              </fieldset>
+
+              <div class="form__nav">
+                <button class="form__back" type="button" data-form-back hidden>{{icon:arrow}} Back</button>
+                <button class="btn btn--rose" type="submit" data-form-next><span class="btn__label">Continue</span><span class="btn__icon">{{icon:arrow}}</span></button>
+              </div>
+              <p class="form__note">{{icon:lock}} Private and confidential. Prefer to talk? Call <a href="tel:+35312343766"><b>01 234 3766</b></a>.</p>
             </div>
-            <p class="field-err" role="alert"></p>
-          </div>
 
-          <div class="fstep">
-            <h2 class="fstep__q">What can we help with?</h2>
-            <p class="fstep__hint">Step 2 of 4 · Choose the closest fit. We'll refine it together.</p>
-            <div class="choice-grid" data-needs></div>
-            <p class="field-err" role="alert"></p>
-          </div>
-
-          <div class="fstep">
-            <h2 class="fstep__q">A little context.</h2>
-            <p class="fstep__hint">Step 3 of 4 · This helps us match you with the right coach.</p>
-            <div class="field-row">
-              <div class="field" data-level-field><label for="e-level">Your level</label>
-                <select class="select" id="e-level">
-                  <option value="">Choose one</option>
-                  <option value="board">Board / C-suite</option>
-                  <option value="director">Director / senior leader</option>
-                  <option value="manager">Manager / team lead</option>
-                  <option value="career">Early to mid-career</option>
-                  <option value="student">Student / graduate</option>
-                </select>
-              </div>
-              <div class="field" data-org-field hidden><label for="e-orgsize">How many people?</label>
-                <select class="select" id="e-orgsize">
-                  <option value="">Choose one</option>
-                  <option>1–5 people</option>
-                  <option>6–20 people</option>
-                  <option>21–100 people</option>
-                  <option>100+ people</option>
-                </select>
-              </div>
-              <div class="field"><label for="e-timeline">When do you want to start?</label>
-                <select class="select" id="e-timeline">
-                  <option value="">Choose one</option>
-                  <option value="now">This week</option>
-                  <option value="month">Within a month</option>
-                  <option value="quarter">In 1–3 months</option>
-                  <option value="exploring">Just exploring</option>
-                </select>
-              </div>
-            </div>
-            <div class="field-row">
-              <div class="field" data-funding-field><label for="e-funding">Who's funding it?</label>
-                <select class="select" id="e-funding">
-                  <option value="">Choose one</option>
-                  <option value="self">Self-funded</option>
-                  <option value="employer">My employer</option>
-                  <option value="unsure">Not sure yet</option>
-                </select>
-              </div>
-              <div class="field"><label for="e-format">Session format</label>
-                <select class="select" id="e-format">
-                  <option value="either">Either is fine</option>
-                  <option value="online">Online (video)</option>
-                  <option value="dublin">In person, Dublin</option>
-                </select>
+            <div class="form__success" role="status">
+              <span class="success__icon">{{icon:tick}}</span>
+              <h2 class="form__title">Thank you, <em data-sent-name>there</em>.</h2>
+              <p class="muted" data-sent-how>Your enquiry is with the Clearview team.</p>
+              <ol class="next-steps">
+                <li><span class="next-steps__num">1</span><div><b>Logged with everything you shared</b><span>So you won't need to repeat yourself.</span></div></li>
+                <li><span class="next-steps__num">2</span><div><b>A reply from the team</b><span><span data-reply-promise>Within one working day</span>, to find a time that suits you.</span></div></li>
+                <li><span class="next-steps__num">3</span><div><b>Your consultation</b><span>Come as you are. Leave with a clearer view of your next step.</span></div></li>
+              </ol>
+              <div class="btn-row mt-l">
+                <a class="btn btn--rose" href="#" data-sent-book hidden target="_blank" rel="noopener"><span class="btn__label">Pick a time now</span><span class="btn__icon">{{icon:calendar}}</span></a>
+                <a class="btn" href="stories.html"><span class="btn__label">Read client stories</span><span class="btn__icon">{{icon:arrow}}</span></a>
               </div>
             </div>
-            <div class="field" data-interview-field hidden><label for="e-interview">Interview date <small>(if you have one)</small></label><input class="input" id="e-interview" type="date"></div>
-            <p class="field-err" role="alert"></p>
-          </div>
-
-          <div class="fstep">
-            <h2 class="fstep__q">How do we reach you?</h2>
-            <p class="fstep__hint">Step 4 of 4 · Your details are only used to reply to this enquiry.</p>
-            <div class="field-row">
-              <div class="field"><label for="e-name">Full name</label><input class="input" id="e-name" type="text" autocomplete="name" required></div>
-              <div class="field"><label for="e-email">Email</label><input class="input" id="e-email" type="email" autocomplete="email" required></div>
-            </div>
-            <div class="field-row">
-              <div class="field"><label for="e-phone">Phone <small>(optional)</small></label><input class="input" id="e-phone" type="tel" autocomplete="tel"></div>
-              <div class="field"><label for="e-org">Organisation <small>(optional)</small></label><input class="input" id="e-org" type="text" autocomplete="organization"></div>
-            </div>
-            <div class="field"><label for="e-msg">Anything you'd like us to know? <small>(optional)</small></label><textarea class="textarea" id="e-msg" placeholder="Where you are now, where you'd like to be, any dates we should know about…"></textarea></div>
-            <label class="consent"><input type="checkbox" id="e-consent"> <span>I'm happy for Clearview to contact me about this enquiry. We only use essential cookies and never share your details.</span></label>
-            <div class="summary"></div>
-            <p class="field-err" role="alert"></p>
-          </div>
-
-          <div class="fnav">
-            <button class="diag__back" type="button" disabled>{{icon:arrow-left}} Back</button>
-            <button class="btn btn--flame" type="button" data-next><span>Continue</span>{{icon:arrow}}</button>
-          </div>
-
-          <div class="fdone" aria-live="polite">
-            <div class="fdone__icon">{{icon:check}}</div>
-            <h2>Thank you. You're on our radar.</h2>
-            <p data-done-text></p>
-            <div class="btn-row" style="justify-content:center;margin-top:26px">
-              <a class="btn btn--flame" href="#" data-done-book hidden target="_blank" rel="noopener"><span>Pick a time now</span>{{icon:calendar}}</a>
-              <a class="btn btn--ghost" href="stories.html"><span>Read client stories</span></a>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </section>

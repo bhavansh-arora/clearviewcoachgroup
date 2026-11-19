@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en-IE">
+<html lang="en-IE" class="no-preloader">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Career Insights & The Career Book by Jane Downes | Clearview</title>
   <meta name="description" content="Practical career thinking from Clearview: interviews, burnout, upskilling and career change, plus The Career Book: Help for the Restless Realist by founder Jane Downes.">
   <link rel="canonical" href="https://clearviewcoachgroup.codebunny.net/insights.html">
-  <meta name="theme-color" content="#120c22">
+  <meta name="theme-color" content="#f4f0e9">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Clearview Coaching Group">
   <meta property="og:title" content="Career Insights & The Career Book by Jane Downes | Clearview">
@@ -14,6 +14,8 @@
   <meta property="og:url" content="https://clearviewcoachgroup.codebunny.net/insights.html">
   <meta property="og:locale" content="en_IE">
   <meta property="og:image" content="https://clearviewcoachgroup.codebunny.net/assets/img/og-clearview.jpg">
+  <meta property="og:image:secure_url" content="https://clearviewcoachgroup.codebunny.net/assets/img/og-clearview.jpg">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Clearview Coaching Group: bring your career into clear view.">
@@ -25,13 +27,14 @@
   <link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-tight-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/fonts.css?v=14b542ca">
-  <link rel="stylesheet" href="assets/css/main.css?v=25366337">
+  <link rel="stylesheet" href="assets/css/fonts.css?v=b056bc4e">
+  <link rel="stylesheet" href="assets/css/main.css?v=dd85a444">
+  <link rel="stylesheet" href="assets/css/clearview.css?v=3750f772">
   <script>
-    (function(d){d.classList.add('js');try{var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;if(!rm&&!sessionStorage.getItem('cv_seen')){d.classList.add('is-loading')}sessionStorage.setItem('cv_seen','1')}catch(e){}})(document.documentElement);
+    (function(d){d.classList.add('js');var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;function ink(){d.classList.add('ui-wine');var m=document.querySelector('meta[name=theme-color]');if(m)m.setAttribute('content','#221a44')}try{var pt=sessionStorage.getItem('cv_pt');if(pt&&!rm)d.style.backgroundColor='#140e2a';if(pt||d.classList.contains('no-preloader')||sessionStorage.getItem('cv_seen')||rm)d.classList.add('no-preloader');else{ink();d.classList.add('is-preloading')}sessionStorage.setItem('cv_seen','1');if(sessionStorage.getItem('cv_pt')&&!rm){d.classList.add('pt-enter');ink();sessionStorage.removeItem('cv_pt');setTimeout(function(){d.classList.remove('pt-enter','ui-wine')},3500)}}catch(e){}})(document.documentElement);
   </script>
   <script type="application/ld+json">
   {
@@ -65,85 +68,82 @@
   </svg>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="loader" aria-hidden="true">
-    <div class="loader__inner">
-      <div class="loader__mark"><i class="loader__disc"></i><i class="loader__ring"></i></div>
-      <div class="loader__word"><span>C</span><span>L</span><span>E</span><span>A</span><span>R</span><span>V</span><span>I</span><span>E</span><span>W</span></div>
-      <div class="loader__tag">Bring your career into <em>clear view</em></div>
-    </div>
-    <div class="loader__count"><span>0</span>%</div>
+  <div class="preloader" aria-hidden="true">
+    <svg class="preloader__seal" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50"/><circle cx="60" cy="60" r="56"/></svg>
+    <div class="preloader__word"><span>C</span><span>l</span><span>e</span><span>a</span><span>r</span><span><em>v</em></span><span><em>i</em></span><span><em>e</em></span><span><em>w</em></span></div>
+    <div class="preloader__tag">Bring your career into clear view</div>
+    <div class="preloader__count">00%</div>
   </div>
 
-  <header class="site-header" data-header>
-    <div class="site-header__bar">
-      <a class="brand" href="index.html" aria-label="Clearview Coaching Group, home"><svg class="mark" viewBox="0 0 250 170" aria-hidden="true"><use href="#cv-mark"/></svg><span class="brand__word">Clearview</span></a>
+  <div class="curtain" aria-hidden="true">
+    <div class="curtain__cols curtain__cols--gold"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="curtain__cols curtain__cols--wine"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="curtain__label">
+      <span class="curtain__kick"><b><svg viewBox="0 0 250 170"><use href="#cv-mark"/></svg></b> Clearview · Coaching Group</span>
+      <span class="curtain__title">Clear<em>view</em></span>
+      <span class="curtain__bar"><i></i></span>
+    </div>
+  </div>
+  <script>try{if(document.documentElement.classList.contains('pt-enter')){var t=sessionStorage.getItem('cv_pt_t');if(t)document.querySelector('.curtain__title').innerHTML=t;}}catch(e){}</script>
 
-      <nav class="nav" aria-label="Primary">
-        <div class="nav__drop" data-drop>
-          <button class="nav__link nav__link--btn" type="button" aria-expanded="false" aria-controls="drop-coaching" >Coaching <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
-          <div class="drop" id="drop-coaching">
-            <div class="drop__grid">
-              <a class="drop__item" href="executive.html" >
-                <span class="drop__num">01</span>
-                <span class="drop__title">Executive coaching</span>
-                <span class="drop__text">Leaders, directors &amp; board level</span>
-              </a>
-              <a class="drop__item" href="career.html" >
-                <span class="drop__num">02</span>
-                <span class="drop__title">Career coaching</span>
-                <span class="drop__text">Change, promotion &amp; direction</span>
-              </a>
-              <a class="drop__item" href="interview.html" >
-                <span class="drop__num">03</span>
-                <span class="drop__title">Interview coaching</span>
-                <span class="drop__text">Walk in ready, at every stage</span>
-              </a>
-              <a class="drop__item" href="organisations.html" >
-                <span class="drop__num">04</span>
-                <span class="drop__title">For organisations</span>
-                <span class="drop__text">In-house coaching, workshops &amp; keynotes</span>
-              </a>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-bar">
+        <a class="brand" href="index.html" aria-label="Clearview Coaching Group, home"><span class="brand__mono"><svg class="brand__mark" viewBox="0 0 250 170" aria-hidden="true"><use href="#cv-mark"/></svg></span><span class="brand__text"><span class="brand__name">Clear<em>view</em></span><span class="brand__sub">Coaching Group · Dublin</span></span></a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html" >Home</a>
+          <a href="about.html" >About</a>
+          <div class="nav__drop">
+            <a href="index.html#paths"  aria-haspopup="true">Coaching <svg class="nav__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+            <div class="nav__sub">
+              <a href="executive.html" ><b>Executive coaching</b><small>Leaders, directors &amp; board level</small></a>
+              <a href="career.html" ><b>Career coaching</b><small>Change, promotion &amp; direction</small></a>
+              <a href="interview.html" ><b>Interview coaching</b><small>Power sessions at every stage</small></a>
+              <a href="career.html#clinic"><b>Career Crisis Clinic</b><small>90 minutes, when it can't wait</small></a>
+              <a href="gift.html" ><b>Gift a voucher</b><small>Give someone what's next</small></a>
             </div>
-            <a class="drop__clinic" href="contact.html?programme=career-crisis-clinic">
-              <span class="drop__clinic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
-              <span><b>Career Crisis Clinic</b><small>A focused 90-minute career troubleshoot, when it can't wait</small></span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
           </div>
+          <a href="organisations.html" >Organisations</a>
+          <a href="stories.html" >Stories</a>
+          <a href="insights.html" aria-current="page">Insights</a>
+        </nav>
+        <div class="header-actions">
+          <a class="header-phone" href="tel:+35312343766"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg> 01 234 3766</a>
+          <a class="btn btn--rose btn--sm" href="contact.html" data-book><span class="btn__label">Book a consultation</span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="menu-toggle__text">Menu</span><span class="menu-toggle__lines"><i></i><i></i></span></button>
         </div>
-        <a class="nav__link" href="about.html" >About</a>
-        <a class="nav__link" href="stories.html" >Client stories</a>
-        <a class="nav__link" href="insights.html" aria-current="page">Insights</a>
-        <a class="nav__link" href="gift.html" >Gift</a>
-      </nav>
-
-      <div class="site-header__actions">
-        <a class="site-header__phone" href="tel:+35312343766" aria-label="Call Clearview on 01 234 3766"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>01 234 3766</span></a>
-        <a class="btn btn--flame btn--sm site-header__cta" href="contact.html" data-magnetic><span>Book a consultation</span></a>
-        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span class="menu-btn__lines"><i></i><i></i></span><span class="menu-btn__label">Menu</span></button>
       </div>
     </div>
   </header>
 
-  <div class="menu" id="menu" aria-hidden="true">
-    <div class="menu__inner">
-      <nav class="menu__nav" aria-label="Mobile">
-        <a href="index.html" ><span>00</span>Home</a>
-        <a href="executive.html" ><span>01</span>Executive coaching</a>
-        <a href="career.html" ><span>02</span>Career coaching</a>
-        <a href="interview.html" ><span>03</span>Interview coaching</a>
-        <a href="organisations.html" ><span>04</span>For organisations</a>
-        <a href="about.html" ><span>05</span>About Clearview</a>
-        <a href="stories.html" ><span>06</span>Client stories</a>
-        <a href="insights.html" aria-current="page"><span>07</span>Insights &amp; the book</a>
-        <a href="gift.html" ><span>08</span>Gift a voucher</a>
-      </nav>
-      <div class="menu__foot">
-        <a class="btn btn--flame" href="contact.html"><span>Book a consultation</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <div class="menu__contact">
-          <a href="tel:+35312343766"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg> 01 234 3766</a>
-          <a href="mailto:jane@clearviewcoachgroup.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg> jane@clearviewcoachgroup.com</a>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg> Upper Pembroke Street, Dublin 2</span>
+  <div class="menu-backdrop" aria-hidden="true"></div>
+  <div class="menu" id="site-menu" inert data-lenis-prevent>
+    <div class="container menu__inner">
+      <ul class="menu__list">
+        <li><a href="index.html" ><span>01</span><b>Home</b></a></li>
+        <li><a href="about.html" ><span>02</span><b>About <em>Clearview</em></b></a></li>
+        <li><a href="executive.html" ><span>03</span><b>Executive <em>coaching</em></b></a></li>
+        <li><a href="career.html" ><span>04</span><b>Career <em>coaching</em></b></a></li>
+        <li><a href="interview.html" ><span>05</span><b>Interview <em>coaching</em></b></a></li>
+        <li><a href="organisations.html" ><span>06</span><b>For <em>organisations</em></b></a></li>
+        <li><a href="stories.html" ><span>07</span><b>Client <em>stories</em></b></a></li>
+        <li><a href="insights.html" aria-current="page"><span>08</span><b>Insights <em>&amp; the book</em></b></a></li>
+        <li><a href="gift.html" ><span>09</span><b>Gift <em>vouchers</em></b></a></li>
+      </ul>
+      <div class="menu__aside">
+        <div class="menu__portrait"><img src="assets/img/jane-cut.webp" alt="" width="436" height="1312" loading="lazy"></div>
+        <div>
+          <h3>Start here</h3>
+          <a class="btn btn--rose" href="contact.html" data-book><span class="btn__label">Book a consultation</span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+        </div>
+        <div>
+          <h3>Talk to us</h3>
+          <a href="tel:+35312343766">01 234 3766</a>
+          <a href="contact.html">Send an enquiry</a>
+        </div>
+        <div>
+          <h3>Sessions</h3>
+          <p class="muted">Online, anywhere · In person, Dublin</p>
         </div>
       </div>
     </div>
@@ -152,144 +152,171 @@
 
   <main id="main">
 
-    <section class="page-hero page-hero--text is-dark">
-      <div class="page-hero__glow" aria-hidden="true"></div>
-      <div class="container page-hero__inner">
-        <div>
-          <nav class="crumbs" aria-label="Breadcrumb" data-reveal><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Insights</span></nav>
-          <span class="eyebrow" data-reveal>Clearview Insights</span>
-          <h1 class="h-mega" data-split style="margin-top:24px;max-width:11ch">Straight talk on <em>careers.</em></h1>
-          <p class="lead" data-reveal>Thinking from a team that's regularly asked by The Irish Times, RTÉ and Newstalk for its view on careers, plus the book that started a lot of career changes.</p>
+
+    <section class="page-hero">
+      <div class="ph-rose" aria-hidden="true"><svg class="rose-art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-draw>
+  <path pathLength="1" d="M34 100a46 46 0 1 0 92 0a46 46 0 1 0 -92 0"/>
+  <path pathLength="1" d="M74 100a46 46 0 1 0 92 0a46 46 0 1 0 -92 0"/>
+  <path pathLength="1" d="M100 12a88 88 0 0 1 88 88"/>
+  <path pathLength="1" d="M12 100a88 88 0 0 0 88 88"/>
+  <path pathLength="1" d="M94 100a6 6 0 1 0 12 0a6 6 0 1 0 -12 0"/>
+  <path pathLength="1" d="M100 36v12M100 152v12M28 100h12M160 100h12"/>
+  <path pathLength="1" d="M160 40l12-12M40 160l-12 12"/>
+</svg>
+</div><span class="sparkle sparkle--lg" style="right:30%;top:24%" aria-hidden="true"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span><span class="sparkle sparkle--sm" style="right:12%;top:46%" aria-hidden="true"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span><span class="sparkle" style="left:46%;top:30%" aria-hidden="true"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+      <div class="page-hero__num" aria-hidden="true">07</div>
+      <div class="container">
+        <nav class="page-hero__crumbs" aria-label="Breadcrumb" data-hero><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Insights</span></nav>
+        <div class="page-hero__grid">
+          <div class="page-hero__title">
+            <span class="label" data-hero>Clearview Insights</span>
+            <h1 class="h1 mt-m" data-split>Straight talk <em>on careers.</em></h1>
+          </div>
+          <div class="page-hero__aside" data-hero>
+            <p>Thinking from a team regularly asked by The Irish Times, RTÉ and Newstalk for its view on careers, plus the book behind a lot of career changes.</p>
+            <a class="btn btn--rose" href="#book" data-magnetic><span class="btn__label">About the book</span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></span></a>
+          </div>
         </div>
-        <div class="page-hero__big" aria-hidden="true">Read</div>
+        <div class="page-hero__media" data-hero>
+          <div class="press-band"><div class="marquee marquee--small marquee--logos" style="--marquee-speed:60s" aria-label="As featured in">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span class="marquee__item"><img src="assets/img/press/irish-times.png" alt="The Irish Times" width="711" height="57" style="--h:1.03rem"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+          <span class="marquee__item"><img src="assets/img/press/rte.png" alt="RTÉ" width="198" height="104" style="--h:2.1rem"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+          <span class="marquee__item"><img src="assets/img/press/newstalk.png" alt="Newstalk" width="377" height="115" style="--h:1.9rem"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+          <span class="marquee__item"><img src="assets/img/press/sunday-times.png" alt="The Sunday Times" width="481" height="88" style="--h:1.45rem"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+          <span class="marquee__item"><img src="assets/img/press/business-post.png" alt="The Business Post" width="692" height="67" style="--h:1.1rem"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+          <span class="marquee__item"><img src="assets/img/press/independent.png" alt="The Independent" width="780" height="55" style="--h:.95rem"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+          <span class="marquee__item"><img src="assets/img/press/irish-examiner.png" alt="Irish Examiner" width="720" height="86" style="--h:1.2rem"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+          <span class="marquee__item"><img src="assets/img/press/virgin-media.png" alt="Virgin Media" width="199" height="120" style="--h:2.1rem"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+          <span class="marquee__item"><img src="assets/img/press/ireland-am.png" alt="Ireland AM" width="203" height="120" style="--h:2.1rem"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+          <span class="marquee__item"><img src="assets/img/press/image.png" alt="IMAGE magazine" width="394" height="118" style="--h:1.8rem"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+          <span class="marquee__item"><img src="assets/img/press/thejournal.png" alt="TheJournal.ie" width="626" height="107" style="--h:1.45rem"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+          <span class="marquee__item"><img src="assets/img/press/irish-tatler.png" alt="Irish Tatler" width="431" height="120" style="--h:1.8rem"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+          <span class="marquee__item"><img src="assets/img/press/stellar.png" alt="Stellar" width="282" height="84" style="--h:1.8rem"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+          <span class="marquee__item"><img src="assets/img/press/goloud.png" alt="GoLoud" width="469" height="120" style="--h:1.7rem"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+        </div>
+      </div>
+    </div>
+</div>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <a class="feature-post" href="https://clearviewcoachgroup.com/interview-tips-leaving-a-bad-employer/" data-reveal>
-          <div class="feature-post__media"><img src="assets/img/insights/bad-employer.webp" alt="" width="740" height="740" loading="lazy" style="object-position:50% 30%"></div>
-          <div class="feature-post__body">
-            <span class="post__cat">Featured · Interviews</span>
-            <h2>How to answer positively about leaving a bad employer</h2>
-            <p>It's okay to dislike your last boss. Bad managers are out there, and interviewers, like any other human, understand. The skill is in how you say it, so the panel hears judgement and growth, not grievance.</p>
-            <span class="link-arrow" style="align-self:flex-start">Read the article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-          </div>
-        </a>
-        <div class="cards-3" data-stagger>
-          <a class="post" data-reveal href="https://clearviewcoachgroup.com/5-steps-to-help-avoid-burnout/">
-            <div class="post__media"><img src="assets/img/insights/burnout.webp" alt="" width="740" height="494" loading="lazy"></div>
-            <div class="post__body"><span class="post__cat">Wellbeing</span><h3>5 steps to help avoid burnout</h3><p>“I'm seeing burnout walk in the door of my practice, day in, day out. It's on an epidemic level.”</p><span class="link-arrow">Read <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-          </a>
-          <a class="post" data-reveal href="https://clearviewcoachgroup.com/upskilling-tips-best-way-to-upskill/">
-            <div class="post__media"><img src="assets/img/insights/upskill.webp" alt="" width="740" height="494" loading="lazy"></div>
-            <div class="post__body"><span class="post__cat">Career growth</span><h3>Upskilling: what is the best way to upskill?</h3><p>One of the biggest things employers seek today is proof of your willingness to learn.</p><span class="link-arrow">Read <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-          </a>
-          <a class="post" data-reveal href="https://clearviewcoachgroup.com/7-steps-to-reevaluating-your-career/">
-            <div class="post__media"><img src="assets/img/insights/reevaluate.webp" alt="" width="350" height="233" loading="lazy"></div>
-            <div class="post__body"><span class="post__cat">Career change</span><h3>7 steps to re-evaluating your career</h3><p>Many people stayed put through uncertain times. If you're now asking “what next?”, start here.</p><span class="link-arrow">Read <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-          </a>
-          <a class="post" data-reveal href="https://clearviewcoachgroup.com/advantages-of-career-coaching/">
-            <div class="post__media"><img src="assets/img/insights/advantages.webp" alt="" width="350" height="234" loading="lazy"></div>
-            <div class="post__body"><span class="post__cat">Coaching</span><h3>The advantages of career coaching, and how it really helps</h3><p>Mapping your next role, a career change or a promotion: what coaching actually changes.</p><span class="link-arrow">Read <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-          </a>
-          <a class="post" data-reveal href="https://clearviewcoachgroup.com/a-time-for-change/">
-            <div class="post__media"><img src="assets/img/insights/time-for-change.webp" alt="" width="350" height="376" loading="lazy" style="object-position:50% 25%"></div>
-            <div class="post__body"><span class="post__cat">From Jane</span><h3>A time for change</h3><p>A few words from founder Jane Downes on Clearview's rebrand, and how to change things up in your own career.</p><span class="link-arrow">Read <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-          </a>
-          <a class="post" data-reveal href="index.html#lens" style="background:var(--night);box-shadow:none;color:var(--paper)">
-            <div class="post__body" style="justify-content:center;padding:clamp(28px,3vw,40px)">
-              <span class="post__cat" style="color:var(--flame)">Interactive</span>
-              <h3 style="font-size:1.7rem">Not sure where to start? Take the 60-second Clearview Lens.</h3>
-              <p style="color:var(--muted-d)">Five questions. A clear recommendation.</p>
-              <span class="link-arrow" style="color:var(--paper)">Start <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section panel is-bone" id="book">
-      <div class="container book">
-        <div class="book__media" data-reveal>
-          <div class="media" data-scale-in><img src="assets/img/jane-book.webp" alt="Jane Downes with The Career Book" width="800" height="1200" loading="lazy" data-parallax="10"></div>
-          <div class="book__cover" aria-hidden="true"><small>Jane Downes</small><div><b>The Career Book</b><em>Help for the Restless Realist</em></div><span>2nd edition</span></div>
-        </div>
-        <div>
-          <span class="eyebrow" data-reveal>By founder Jane Downes</span>
-          <h2 class="h2" data-split style="margin-top:22px">The Career Book. Help for the <em>restless realist.</em></h2>
-          <div class="prose" data-reveal style="margin-top:24px">
-            <p>Nothing short of a game-changer for anyone contemplating career development or transition, or embarking on a career for the first time. First published in 2010, with a revised second edition in 2012.</p>
-          </div>
-          <div class="endorse" data-stagger>
-            <figure data-reveal><blockquote>“I defy you to read this book without feeling an urge to transform your career.”</blockquote><figcaption><b>Claire Byrne</b>Broadcaster &amp; journalist</figcaption></figure>
-            <figure data-reveal><blockquote>“This book is unusual because it is both original and practical.”</blockquote><figcaption><b>Edward de Bono</b>Founder of Lateral Thinking</figcaption></figure>
-            <figure data-reveal><blockquote>“This book will make you think, but that's not all: it will give you the confidence to DO.”</blockquote><figcaption><b>Senator Feargal Quinn</b>Founder of Superquinn</figcaption></figure>
-            <figure data-reveal><blockquote>“Holds up an important mirror to those considering a career change.”</blockquote><figcaption><b>Simon Carswell</b>The Irish Times</figcaption></figure>
-          </div>
-          <div class="btn-row" data-reveal style="margin-top:32px">
-            <a class="btn btn--flame" href="https://www.amazon.com/The-Career-Book-Restless-Realist/dp/1842181971" target="_blank" rel="noopener"><span>Order the book</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-            <a class="btn btn--ghost" href="contact.html"><span>Work with Jane</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section panel is-dark">
-      <div class="container">
         <div class="sec-head">
           <div class="sec-head__title">
-            <span class="eyebrow" data-reveal>In the media</span>
-            <h2 class="h2" data-split>A trusted voice on <em>careers.</em></h2>
+            <span class="label">From the blog</span>
+            <h2 class="h2" data-split>Read, then <em>act on it.</em></h2>
           </div>
-          <p class="sec-head__aside" data-reveal>Jane is a regular media commentator on all things career related, across national press, radio and television.</p>
+          <div class="sec-head__aside" data-reveal><p class="muted">Practical thinking on interviews, burnout, upskilling and change, from the Clearview team.</p></div>
         </div>
-        <div class="press" aria-label="As featured in">
-          <span class="press__label">As featured in</span>
-          <div class="press__track">
-            <div class="press__row">
-              <img src="assets/img/press/irish-times.png" alt="The Irish Times" width="711" height="57" style="--h:1.03rem" loading="lazy">
-              <img src="assets/img/press/rte.png" alt="RTÉ" width="198" height="104" style="--h:2.38rem" loading="lazy">
-              <img src="assets/img/press/newstalk.png" alt="Newstalk" width="377" height="115" style="--h:2.00rem" loading="lazy">
-              <img src="assets/img/press/sunday-times.png" alt="The Sunday Times" width="481" height="88" style="--h:1.55rem" loading="lazy">
-              <img src="assets/img/press/business-post.png" alt="The Business Post" width="692" height="67" style="--h:1.13rem" loading="lazy">
-              <img src="assets/img/press/independent.png" alt="The Independent" width="780" height="55" style="--h:0.96rem" loading="lazy">
-              <img src="assets/img/press/irish-examiner.png" alt="Irish Examiner" width="720" height="86" style="--h:1.25rem" loading="lazy">
-              <img src="assets/img/press/virgin-media.png" alt="Virgin Media" width="199" height="120" style="--h:2.38rem" loading="lazy">
-              <img src="assets/img/press/ireland-am.png" alt="Ireland AM" width="203" height="120" style="--h:2.38rem" loading="lazy">
-              <img src="assets/img/press/image.png" alt="IMAGE magazine" width="394" height="118" style="--h:1.98rem" loading="lazy">
-              <img src="assets/img/press/thejournal.png" alt="TheJournal.ie" width="626" height="107" style="--h:1.50rem" loading="lazy">
-              <img src="assets/img/press/irish-tatler.png" alt="Irish Tatler" width="431" height="120" style="--h:1.91rem" loading="lazy">
-              <img src="assets/img/press/stellar.png" alt="Stellar" width="282" height="84" style="--h:1.98rem" loading="lazy">
-              <img src="assets/img/press/elaine.png" alt="The Elaine Show" width="292" height="96" style="--h:2.08rem" loading="lazy">
-              <img src="assets/img/press/goloud.png" alt="GoLoud" width="469" height="120" style="--h:1.83rem" loading="lazy">
-            </div>
-          </div>
+        <div class="articles" data-stagger>
+          <a class="article article--feature" href="https://clearviewcoachgroup.com/interview-tips-leaving-a-bad-employer/" data-cursor="Read">
+            <div class="article__top"><span class="article__cat">Interviews · Featured</span><span class="article__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+            <h3>How to answer positively about leaving a bad employer</h3>
+            <p>It's okay to dislike your last boss. Bad managers are out there, and interviewers, like any other human, understand. The skill is in how you say it.</p>
+          </a>
+          <a class="article" href="https://clearviewcoachgroup.com/5-steps-to-help-avoid-burnout/" data-cursor="Read">
+            <div class="article__top"><span class="article__cat">Wellbeing</span><span class="article__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+            <h3>5 steps to help avoid burnout</h3>
+            <p>“I'm seeing burnout walk in the door of my practice, day-in, day-out.”</p>
+          </a>
+          <a class="article" href="https://clearviewcoachgroup.com/upskilling-tips-best-way-to-upskill/" data-cursor="Read">
+            <div class="article__top"><span class="article__cat">Growth</span><span class="article__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+            <h3>Upskilling: what is the best way to upskill?</h3>
+            <p>Employers want to see a willingness to learn. Here's how to show it.</p>
+          </a>
+          <a class="article" href="https://clearviewcoachgroup.com/7-steps-to-reevaluating-your-career/" data-cursor="Read">
+            <div class="article__top"><span class="article__cat">Career change</span><span class="article__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+            <h3>7 steps to re-evaluating your career</h3>
+            <p>If you're asking “what next?”, start here.</p>
+          </a>
+          <a class="article" href="https://clearviewcoachgroup.com/advantages-of-career-coaching/" data-cursor="Read">
+            <div class="article__top"><span class="article__cat">Coaching</span><span class="article__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+            <h3>The advantages of career coaching</h3>
+            <p>A next role, a change of career or a promotion: what coaching actually changes.</p>
+          </a>
+          <a class="article" href="https://clearviewcoachgroup.com/a-time-for-change/" data-cursor="Read">
+            <div class="article__top"><span class="article__cat">From Jane</span><span class="article__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+            <h3>A time for change</h3>
+            <p>A few words from Jane on Clearview's rebrand, and how to change things up in your own career.</p>
+          </a>
+          <a class="article article--lens" href="index.html#lens" data-cursor="Start">
+            <div class="article__top"><span class="article__cat">Interactive</span><span class="article__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span></div>
+            <h3>Not sure where to start? Take the 60-second Clearview Lens.</h3>
+            <p>Five questions. One clear recommendation.</p>
+          </a>
         </div>
-
       </div>
     </section>
 
-    <section class="cta-final panel is-dark" data-header-dark>
-      <div class="cta-final__glow" aria-hidden="true"></div>
-      <div class="container cta-final__grid">
-        <div class="cta-final__copy">
-          <span class="eyebrow" data-reveal>Confidential consultation</span>
-          <h2 class="h-mega" data-split>Let's start a <em>conversation.</em></h2>
-          <p class="lead" data-reveal>If you want to feel more in control, valued, supported and clear about what you want to do next, talk to us. A short exploratory call by phone or video comes first, before any coaching begins.</p>
+    <section class="section paper-2" id="book">
+      <div class="container book">
+        <div class="book__visual" data-reveal>
+          <div class="book__3d book__3d--lg"><div class="cbook"><small>Jane Downes</small><b>The Career Book</b><em>Help for the Restless Realist</em></div></div>
+        </div>
+        <div class="book__copy">
+          <span class="label">The book</span>
+          <h2 class="h2" data-split><em>The Career Book.</em> Help for the restless realist.</h2>
+          <p class="lead" data-reveal>Nothing short of a game-changer for anyone contemplating career development or transition, or embarking on a career for the first time.</p>
+          <p class="muted mt-s" data-reveal>First published in 2010, with a revised second edition in 2012, by Clearview founder Jane Downes.</p>
+          <div class="book__pillars" data-reveal><span>Restless</span><span>Realist</span><span>Ready</span></div>
           <div class="btn-row" data-reveal>
-            <a class="btn btn--flame btn--lg" href="contact.html" data-magnetic><span>Book a consultation</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a class="btn btn--ghost btn--lg" href="tel:+35312343766"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>01 234 3766</span></a>
+            <a class="btn" href="https://www.amazon.com/The-Career-Book-Restless-Realist/dp/1842181971" target="_blank" rel="noopener" data-magnetic><span class="btn__label">Order the book</span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+            <a class="link-arrow" href="contact.html"><span>Work with Jane</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </div>
-        <div class="cta-final__card" data-reveal>
-          <div class="cta-final__lens" aria-hidden="true"><svg viewBox="0 0 250 170"><use href="#cv-mark"/></svg></div>
-          <ul class="cta-final__list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 1 1 8 0v3"/></svg><span><b>Completely confidential.</b> What you share stays between you and your coach.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg><span><b>Matched to the right coach</b>: Jane or Susan, chosen for your situation.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="13" height="12" rx="3"/><path d="m15.5 10.5 6-3.5v10l-6-3.5"/></svg><span><b>Online or in person</b> in Dublin, for clients in Ireland and worldwide.</span></li>
-          </ul>
-          <a class="cta-final__mail" href="mailto:jane@clearviewcoachgroup.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg> jane@clearviewcoachgroup.com</a>
+      </div>
+      <div class="container mt-xl">
+        <div class="cards cards--4" data-stagger>
+          <figure class="card"><blockquote class="serif" style="font-size:1.3rem;line-height:1.25">“I defy you to read this book without feeling an urge to transform your career.”</blockquote><figcaption class="small muted mt-s"><b style="color:var(--ink)">Claire Byrne</b><br>Broadcaster &amp; journalist</figcaption></figure>
+          <figure class="card card--dark"><blockquote class="serif" style="font-size:1.3rem;line-height:1.25">“This book is unusual because it is both original and practical.”</blockquote><figcaption class="small mt-s" style="color:var(--muted-light)"><b style="color:var(--ivory)">Edward de Bono</b><br>Founder of Lateral Thinking</figcaption></figure>
+          <figure class="card"><blockquote class="serif" style="font-size:1.3rem;line-height:1.25">“This book will make you think, but that's not all: it will give you the confidence to DO.”</blockquote><figcaption class="small muted mt-s"><b style="color:var(--ink)">Senator Feargal Quinn</b><br>Founder of Superquinn</figcaption></figure>
+          <figure class="card card--rose"><blockquote class="serif" style="font-size:1.3rem;line-height:1.25">“Holds up an important mirror to those considering a career change.”</blockquote><figcaption class="small mt-s"><b>Simon Carswell</b><br>Finance Correspondent, The Irish Times</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-final" data-theme="dark">
+      <div class="hero__glow" aria-hidden="true"><i></i><i></i></div>
+      <div class="cta-rose cta-rose--l" aria-hidden="true"><svg class="rose-art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-draw>
+  <path pathLength="1" d="M34 100a46 46 0 1 0 92 0a46 46 0 1 0 -92 0"/>
+  <path pathLength="1" d="M74 100a46 46 0 1 0 92 0a46 46 0 1 0 -92 0"/>
+  <path pathLength="1" d="M100 12a88 88 0 0 1 88 88"/>
+  <path pathLength="1" d="M12 100a88 88 0 0 0 88 88"/>
+  <path pathLength="1" d="M94 100a6 6 0 1 0 12 0a6 6 0 1 0 -12 0"/>
+  <path pathLength="1" d="M100 36v12M100 152v12M28 100h12M160 100h12"/>
+  <path pathLength="1" d="M160 40l12-12M40 160l-12 12"/>
+</svg>
+</div>
+      <div class="cta-rose cta-rose--r" aria-hidden="true"><svg class="rose-art" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-draw>
+  <path pathLength="1" d="M34 100a46 46 0 1 0 92 0a46 46 0 1 0 -92 0"/>
+  <path pathLength="1" d="M74 100a46 46 0 1 0 92 0a46 46 0 1 0 -92 0"/>
+  <path pathLength="1" d="M100 12a88 88 0 0 1 88 88"/>
+  <path pathLength="1" d="M12 100a88 88 0 0 0 88 88"/>
+  <path pathLength="1" d="M94 100a6 6 0 1 0 12 0a6 6 0 1 0 -12 0"/>
+  <path pathLength="1" d="M100 36v12M100 152v12M28 100h12M160 100h12"/>
+  <path pathLength="1" d="M160 40l12-12M40 160l-12 12"/>
+</svg>
+</div>
+      <span class="sparkle sparkle--lg" style="left:22%;top:20%" aria-hidden="true"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+      <span class="sparkle" style="right:24%;top:70%" aria-hidden="true"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+      <span class="sparkle sparkle--sm" style="left:30%;bottom:16%" aria-hidden="true"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+      <span class="sparkle sparkle--sm" style="right:14%;top:24%" aria-hidden="true"><svg viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><path d="M20 2c1.2 11.6 6.4 16.8 18 18-11.6 1.2-16.8 6.4-18 18-1.2-11.6-6.4-16.8-18-18C13.6 18.8 18.8 13.6 20 2z"/></svg></span>
+      <div class="container cta-final__inner">
+        <span class="label">Your next move starts with one conversation</span>
+        <h2 class="h-mega" data-split>Your next move <em>is waiting.</em></h2>
+        <p>If you want to feel more in control, valued and clear about what comes next, talk to us. A short, confidential call by phone or video comes first.</p>
+        <div class="btn-row" style="justify-content:center">
+          <a class="btn btn--rose" href="contact.html" data-book data-magnetic><span class="btn__label">Book a consultation</span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+          <a class="btn btn--light" href="index.html#lens" data-magnetic><span class="btn__label">Find your path</span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span></a>
+        </div>
+        <div class="cta-final__contact">
+          <a href="tel:+35312343766"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg> 01 234 3766</a>
+          <a href="mailto:jane@clearviewcoachgroup.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg> jane@clearviewcoachgroup.com</a>
+          <span style="display:inline-flex;gap:10px;align-items:center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg> Dublin 2 · Online worldwide</span>
         </div>
       </div>
     </section>
@@ -297,67 +324,53 @@
 
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" data-theme="dark">
     <div class="container">
-      <div class="footer__top">
-        <div class="footer__intro">
-          <a class="brand brand--lg" href="index.html" aria-label="Clearview Coaching Group, home"><svg class="mark" viewBox="0 0 250 170" aria-hidden="true"><use href="#cv-mark"/></svg><span class="brand__word">Clearview</span></a>
-          <p>Multi-award-winning career and career performance coaching. Dublin 2, since 2004, working with leaders, professionals and teams in Ireland and around the world.</p>
-          <div class="footer__rating">
-            <span class="footer__g"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.2-2.1 3.5-5.1 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6h-4a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.8 3.6-4.9 6.7-4.9z"/></svg></span>
-            <span><b>4.8</b> <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.5 2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.5 2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.5 2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.5 2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.5 2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span><small>24 Google reviews</small></span>
-          </div>
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html" aria-label="Clearview Coaching Group, home"><span class="brand__mono"><svg class="brand__mark" viewBox="0 0 250 170" aria-hidden="true"><use href="#cv-mark"/></svg></span><span class="brand__text"><span class="brand__name">Clear<em>view</em></span><span class="brand__sub">Coaching Group · Dublin</span></span></a>
+          <p>Multi-award-winning career and career performance coaching for leaders, professionals and teams. Dublin 2, since 2004.</p>
+          <a class="footer__rating" href="stories.html"><span class="footer__g"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.6v3h3.9c2.2-2.1 3.5-5.1 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6h-4a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.8 3.6-4.9 6.7-4.9z"/></svg></span><span><b>4.8</b> <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.5 2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.5 2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.5 2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.5 2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.5 2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span><small>24 Google reviews</small></span></a>
         </div>
-        <div class="footer__cols">
-          <div class="footer__col">
-            <h2 class="footer__h">Coaching</h2>
-            <a href="executive.html">Executive coaching</a>
-            <a href="career.html">Career coaching</a>
-            <a href="interview.html">Interview coaching</a>
-            <a href="organisations.html">For organisations</a>
-            <a href="contact.html?programme=career-crisis-clinic">Career Crisis Clinic</a>
-          </div>
-          <div class="footer__col">
-            <h2 class="footer__h">Clearview</h2>
-            <a href="about.html">About &amp; coaches</a>
-            <a href="stories.html">Client stories</a>
-            <a href="insights.html">Insights</a>
-            <a href="insights.html#book">The Career Book</a>
-            <a href="gift.html">Gift vouchers</a>
-          </div>
-          <div class="footer__col">
-            <h2 class="footer__h">Talk to us</h2>
-            <a href="tel:+35312343766">01 234 3766</a>
-            <a href="tel:+353863952761">086 395 2761</a>
-            <a href="mailto:jane@clearviewcoachgroup.com">jane@clearviewcoachgroup.com</a>
-            <address>Suite 11247, 26/27 Upper Pembroke Street, Dublin 2, D02 X361</address>
-            <div class="footer__social">
-              <a href="https://www.linkedin.com/company/clearview-coaching-group" target="_blank" rel="noopener" aria-label="Clearview on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a>
-              <a href="https://www.instagram.com/clearviewcoachgroup/" target="_blank" rel="noopener" aria-label="Clearview on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
-            </div>
+        <div class="footer__col">
+          <h3>Coaching</h3>
+          <ul>
+            <li><a href="executive.html">Executive</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="interview.html">Interview</a></li>
+            <li><a href="organisations.html">Organisations</a></li>
+            <li><a href="career.html#clinic">Crisis Clinic</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="about.html">About &amp; coaches</a></li>
+            <li><a href="stories.html">Client stories</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="insights.html#book">The Career Book</a></li>
+            <li><a href="gift.html">Gift vouchers</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--wide">
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="tel:+35312343766">01 234 3766</a> · <a href="tel:+353863952761">086 395 2761</a></li>
+            <li><a href="mailto:jane@clearviewcoachgroup.com">jane@clearviewcoachgroup.com</a></li>
+            <li>Suite 11247, 26/27 Upper Pembroke Street, Dublin 2, D02 X361</li>
+          </ul>
+          <div class="socials mt-m">
+            <a href="https://www.linkedin.com/company/clearview-coaching-group" target="_blank" rel="noopener" aria-label="Clearview on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a>
+            <a href="https://www.instagram.com/clearviewcoachgroup/" target="_blank" rel="noopener" aria-label="Clearview on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
+            <a href="tel:+35312343766" aria-label="Call Clearview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
           </div>
         </div>
       </div>
-
-      <div class="footer__awards" aria-label="Awards">
-        <span>MSN Top 10 Trailblazing Women 2026</span>
-        <span>Top Women Founders to Watch 2026</span>
-        <span>International Women Entrepreneur Awards 2024</span>
-        <span>Best in Ireland, Career Coaching 2023/24</span>
-        <span>Manage HR Europe Top 10, 2023</span>
-        <span>Irish Enterprise Awards 2021</span>
-      </div>
-
-      <div class="footer__word" aria-hidden="true"><div class="footer__word-in"><span>Clear</span><em>view</em></div></div>
-
-      <div class="footer__legal">
-        <span>© 2026 Clearview Coaching Group. All rights reserved.</span>
-        <span class="footer__legal-links">
-          <a href="https://clearviewcoachgroup.com/privacy-policy/">Privacy</a>
-          <a href="https://clearviewcoachgroup.com/terms-of-service/">Terms</a>
-          <a href="https://clearviewcoachgroup.com/privacy-policy/#cookies">Cookies</a>
-        </span>
-        <a class="footer__top-link" href="#main" data-to-top>Back to top <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      <div class="footer__word" aria-hidden="true">Clear<em>view</em></div>
+      <div class="footer__bar">
+        <span>© <span data-year>2026</span> Clearview Coaching Group. All rights reserved.</span>
+        <span class="footer__legal"><a href="https://clearviewcoachgroup.com/privacy-policy/">Privacy</a> · <a href="https://clearviewcoachgroup.com/terms-of-service/">Terms</a> · <a href="https://clearviewcoachgroup.com/privacy-policy/#cookies">Cookies</a></span>
+        <a href="#main">Back to top ↑</a>
       </div>
     </div>
   </footer>
@@ -369,6 +382,8 @@
   <script src="assets/vendor/ScrollTrigger.min.js?v=ba1fa78e" defer></script>
   <script src="assets/vendor/lenis.min.js?v=79e3a064" defer></script>
   <script src="assets/js/config.js?v=155d1a80" defer></script>
-  <script src="assets/js/site.js?v=41cd8cc2" defer></script>
+  <script src="assets/js/tools.js?v=d68449aa" defer></script>
+  <script src="assets/js/site.js?v=4d5094c3" defer></script>
+  <script src="assets/js/motion.js?v=0051cdac" defer></script>
 </body>
 </html>

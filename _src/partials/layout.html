@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en-IE">
+<html lang="en-IE" class="{{page.htmlclass}}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>{{page.title}}</title>
   <meta name="description" content="{{page.description}}">
   <link rel="canonical" href="{{page.canonical}}">
-  <meta name="theme-color" content="#120c22">
+  <meta name="theme-color" content="#f4f0e9">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Clearview Coaching Group">
   <meta property="og:title" content="{{page.title}}">
@@ -14,6 +14,8 @@
   <meta property="og:url" content="{{page.canonical}}">
   <meta property="og:locale" content="en_IE">
   <meta property="og:image" content="https://clearviewcoachgroup.codebunny.net/{{page.og_image}}">
+  <meta property="og:image:secure_url" content="https://clearviewcoachgroup.codebunny.net/{{page.og_image}}">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Clearview Coaching Group: bring your career into clear view.">
@@ -25,13 +27,14 @@
   <link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-tight-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/clearview.css">
   <script>
-    (function(d){d.classList.add('js');try{var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;if(!rm&&!sessionStorage.getItem('cv_seen')){d.classList.add('is-loading')}sessionStorage.setItem('cv_seen','1')}catch(e){}})(document.documentElement);
+    (function(d){d.classList.add('js');var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;function ink(){d.classList.add('ui-wine');var m=document.querySelector('meta[name=theme-color]');if(m)m.setAttribute('content','#221a44')}try{var pt=sessionStorage.getItem('cv_pt');if(pt&&!rm)d.style.backgroundColor='#140e2a';if(pt||d.classList.contains('no-preloader')||sessionStorage.getItem('cv_seen')||rm)d.classList.add('no-preloader');else{ink();d.classList.add('is-preloading')}sessionStorage.setItem('cv_seen','1');if(sessionStorage.getItem('cv_pt')&&!rm){d.classList.add('pt-enter');ink();sessionStorage.removeItem('cv_pt');setTimeout(function(){d.classList.remove('pt-enter','ui-wine')},3500)}}catch(e){}})(document.documentElement);
   </script>
   <script type="application/ld+json">
   {
@@ -65,14 +68,23 @@
   </svg>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="loader" aria-hidden="true">
-    <div class="loader__inner">
-      <div class="loader__mark"><i class="loader__disc"></i><i class="loader__ring"></i></div>
-      <div class="loader__word"><span>C</span><span>L</span><span>E</span><span>A</span><span>R</span><span>V</span><span>I</span><span>E</span><span>W</span></div>
-      <div class="loader__tag">Bring your career into <em>clear view</em></div>
-    </div>
-    <div class="loader__count"><span>0</span>%</div>
+  <div class="preloader" aria-hidden="true">
+    <svg class="preloader__seal" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50"/><circle cx="60" cy="60" r="56"/></svg>
+    <div class="preloader__word"><span>C</span><span>l</span><span>e</span><span>a</span><span>r</span><span><em>v</em></span><span><em>i</em></span><span><em>e</em></span><span><em>w</em></span></div>
+    <div class="preloader__tag">Bring your career into clear view</div>
+    <div class="preloader__count">00%</div>
   </div>
+
+  <div class="curtain" aria-hidden="true">
+    <div class="curtain__cols curtain__cols--gold"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="curtain__cols curtain__cols--wine"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="curtain__label">
+      <span class="curtain__kick"><b><svg viewBox="0 0 250 170"><use href="#cv-mark"/></svg></b> Clearview · Coaching Group</span>
+      <span class="curtain__title">Clear<em>view</em></span>
+      <span class="curtain__bar"><i></i></span>
+    </div>
+  </div>
+  <script>try{if(document.documentElement.classList.contains('pt-enter')){var t=sessionStorage.getItem('cv_pt_t');if(t)document.querySelector('.curtain__title').innerHTML=t;}}catch(e){}</script>
 
   {{> header}}
 
@@ -88,6 +100,8 @@
   <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
   <script src="assets/vendor/lenis.min.js" defer></script>
   <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/tools.js" defer></script>
   <script src="assets/js/site.js" defer></script>
+  <script src="assets/js/motion.js" defer></script>
 </body>
 </html>

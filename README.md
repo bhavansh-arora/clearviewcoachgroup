@@ -7,9 +7,9 @@ All content (services, fees, awards, reviews, coach bios and photos) comes from 
 ## Pages
 | Page | File |
 | --- | --- |
-| Home (hero lens, 60-second Clearview Lens diagnostic, awards, stories) | `index.html` |
+| Home (magazine-cover hero, proof bento, four paths, testimonial wall, Clearview Lens, gift vouchers) | `index.html` |
 | Executive coaching (fees, 1st 90 Days, "Get it funded" letter generator, FAQ) | `executive.html` |
-| Career coaching ("Name the feeling" explorer, 9 programmes, FAQ) | `career.html` |
+| Career coaching ("Name the feeling" explorer, 8 programmes, Career Crisis Clinic, FAQ) | `career.html` |
 | Interview coaching (interview countdown planner, power sessions) | `interview.html` |
 | For organisations (in-house offers, Lunch & Learn builder) | `organisations.html` |
 | About (story, timeline, Jane & Susan, why Clearview) | `about.html` |
@@ -27,9 +27,12 @@ python3 _src/build.py
 ```
 
 - `_src/pages/*.html`: the body of each page (the meta block at the top sets the title and description)
-- `_src/partials/*.html`: shared header, footer, final call to action, press marquee
-- `assets/css/main.css`: design tokens (colours, type scale, spacing) at the top, then the components
-- `assets/js/site.js`: motion, menu, hero lens, Clearview Lens, planner, funding letter, builder, filters, voucher designer and enquiry form. The programme catalogue (names, fees, formats) sits at the top in `P`.
+- `_src/partials/*.html`: shared header and menu, footer, final call to action, the Clearview Lens, press and awards marquees, line art
+- `assets/css/main.css`: design tokens (colours, type scale, spacing) at the top, then the core components
+- `assets/css/clearview.css`: brand details and Clearview-only components (pricing rows, planner, letter, voucher designer, coach cards)
+- `assets/js/site.js`: smooth scroll, header, menu, cursor, preloader and **in-place page transitions** (pages swap behind a curtain, with no full reloads)
+- `assets/js/motion.js`: GSAP + ScrollTrigger animations, rebuilt for each page (respects `prefers-reduced-motion`)
+- `assets/js/tools.js`: the Clearview Lens, enquiry brief, interview planner, funding letter, Lunch & Learn builder, feelings explorer, voucher designer and coach tabs. The programme catalogue (names, fees, formats) sits at the top in `P`.
 
 ## Connecting the automations
 Everything is set in **`assets/js/config.js`**:
