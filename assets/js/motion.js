@@ -95,6 +95,18 @@
      don't recalculate every trigger mid-scroll (prevents jumps/jitter). */
   ST.config({ ignoreMobileResize: true });
 
+  /* Word reveals. Desktop: words slide up from behind a mask. Phones and
+     tablets: words fade and rise with no mask, because iOS Safari can stall
+     or fail to repaint masked text and leave letters cut off. */
+  var SOFT = window.matchMedia("(hover: none), (pointer: coarse), (max-width: 1024px)").matches;
+  if (SOFT) document.documentElement.classList.add("split-soft");
+  var WORD_FROM = SOFT ? { yPercent: 35, autoAlpha: 0 } : { yPercent: 118 };
+  var WORD_TO = SOFT ? { yPercent: 0, autoAlpha: 1 } : { yPercent: 0 };
+  function wordsDone(el) {
+    $$(".split-line", el).forEach(function (l) { l.classList.add("is-done"); });
+    gsap.set($$(".split-line > span", el), { clearProps: "transform,opacity,visibility,willChange" });
+  }
+
   /* Lenis <-> ScrollTrigger (once) */
   if (window.lenis) {
     window.lenis.on("scroll", ST.update);
@@ -142,10 +154,10 @@
 
       function animateSplit(el) {
         var words = $$(".split-line > span", el);
-        return gsap.fromTo(words, { yPercent: 118 }, {
-          yPercent: 0, duration: 1.5, ease: "expo.out", stagger: 0.05,
-          onComplete: function () { $$(".split-line", el).forEach(function (l) { l.classList.add("is-done"); }); }
-        });
+        return gsap.fromTo(words, WORD_FROM, Object.assign({}, WORD_TO, {
+          duration: SOFT ? 1.1 : 1.5, ease: "expo.out", stagger: 0.05,
+          onComplete: function () { wordsDone(el); }
+        }));
       }
 
       /* ---------- Hero intro ---------- */
@@ -168,7 +180,7 @@
       var heroBits = $$("[data-hero]", root);
       var heroWords = [];
       heroSplits.forEach(function (el) { heroWords = heroWords.concat($$(".split-line > span", el)); });
-      if (heroWords.length) gsap.set(heroWords, { yPercent: 118 });
+      if (heroWords.length) gsap.set(heroWords, WORD_FROM);
       if (heroBits.length) gsap.set(heroBits, { autoAlpha: 0, y: 30 });
       var heroRise = root.querySelector("[data-hero-rise]");
       if (heroRise) gsap.set(heroRise, { yPercent: 18, autoAlpha: 0 });
@@ -180,9 +192,11 @@
         if (heroRise) tl.to(heroRise, { yPercent: 0, autoAlpha: 1, duration: 1.8 }, 0.45);
         if (pops.length) tl.to(pops, { autoAlpha: 1, y: 0, scale: 1, duration: 1.2, stagger: 0.09 }, 0.8);
         heroSplits.forEach(function (el, i) {
-          tl.to($$(".split-line > span", el), { yPercent: 0, duration: 1.6, stagger: 0.07, onComplete: function () { $$(".split-line", el).forEach(function (l) { l.classList.add("is-done"); }); } }, 0.2 + i * 0.12);
+          tl.to($$(".split-line > span", el), Object.assign({}, WORD_TO, { duration: SOFT ? 1.2 : 1.6, stagger: 0.07, onComplete: function () { wordsDone(el); } }), 0.2 + i * 0.12);
         });
         if (heroBits.length) tl.to(heroBits, { autoAlpha: 1, y: 0, duration: 1.4, stagger: 0.1 }, 0.8);
+        /* Safety net: whatever happens to the frame rate, headings end fully visible */
+        gsap.delayedCall(3.5, function () { heroSplits.forEach(wordsDone); });
       }
       if (mode === "preloader") document.addEventListener("site:loaded", playHero, { once: true });
       else if (mode === "enter") gsap.delayedCall(0.6, playHero);
@@ -191,7 +205,7 @@
       /* Other split headings reveal on scroll */
       $$("[data-split]", root).forEach(function (el) {
         if (heroSplits.indexOf(el) > -1) return;
-        gsap.set($$(".split-line > span", el), { yPercent: 118 });
+        gsap.set($$(".split-line > span", el), WORD_FROM);
         ST.create({ trigger: el, start: "top 96%", once: true, onEnter: function () { animateSplit(el); } });
       });
 

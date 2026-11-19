@@ -423,3 +423,7 @@ a, button, label, .topic, .option, .choice, .vopt { -webkit-tap-highlight-color:
   [data-builder] .topic::before, [data-feel] .topic::before { position: static; flex: none; }
   [data-builder] .topic__t, [data-feel] .topic__t { min-width: 0; }
 }
+
+/* Phones & tablets: word reveals without a clipping mask (see motion.js) */
+.split-soft .split-line { overflow: visible; }
+.split-soft .split-line > span { will-change: auto; }
