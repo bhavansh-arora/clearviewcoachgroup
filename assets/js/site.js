@@ -80,10 +80,14 @@
       header.classList.toggle("is-scrolled", y > 40);
       /* Hide on a deliberate scroll down, show on a deliberate scroll up.
          Small jitters (iOS momentum settling, rubber-banding) are ignored. */
+      /* Clamp to the real scroll range: iPhone's bounce at the end of a page
+         overshoots and springs back, which would otherwise read as a scroll up. */
+      var max = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+      y = Math.min(Math.max(y, 0), max);
       var delta = y - lastY;
       if (body.classList.contains("menu-open") || y < 80) header.classList.remove("is-hidden");
       else if (delta > 6) header.classList.add("is-hidden");
-      else if (delta < -10) header.classList.remove("is-hidden");
+      else if (delta < -10 && y < max - 40) header.classList.remove("is-hidden");
       header.classList.toggle("on-dark", darkUnderHeader());
     }
     if (Math.abs(y - lastY) > 6 || y < 80) lastY = y;
