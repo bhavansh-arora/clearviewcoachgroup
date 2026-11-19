@@ -156,8 +156,8 @@
     body.classList.add("is-loaded");
   }
   function finishPreloader() {
-    pre.style.transition = "clip-path 1.1s cubic-bezier(.65,0,.35,1)";
-    pre.style.clipPath = "inset(0 0 100% 0)";
+    pre.style.transition = "opacity .8s ease";
+    pre.style.opacity = "0";
     doc.classList.remove("is-preloading");
     setTimeout(uiIvory, 500);
     body.classList.add("is-loaded");
@@ -269,17 +269,19 @@
     return new Promise(function (resolve) {
       if (ctTitle) ctTitle.innerHTML = titleFor(path);
       curtain.classList.add("is-covering");
-      setTimeout(uiWine, 350);
+      setTimeout(uiWine, 250);
       var done = false;
       var fin = function () {
         if (done) return; done = true;
         curtain.classList.add("is-covered"); doc.classList.add("pt-covered");
-        setTimeout(resolve, 500);   /* hold on the page title for a beat */
+        setTimeout(resolve, 380);   /* hold on the page title for a beat */
       };
-      var cols = $$(".curtain__cols--wine i", curtain).filter(function (c) { return c.offsetWidth > 0; });
-      var last = cols[cols.length - 1];
-      if (last) last.addEventListener("transitionend", function (ev) { if (ev.propertyName === "transform") setTimeout(fin, 60); }, { once: true });
-      setTimeout(fin, 1700);
+      curtain.addEventListener("transitionend", function onEnd(ev) {
+        if (ev.target !== curtain || ev.propertyName !== "opacity") return;
+        curtain.removeEventListener("transitionend", onEnd);
+        fin();
+      });
+      setTimeout(fin, 700);
     });
   }
 

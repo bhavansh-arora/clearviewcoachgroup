@@ -331,17 +331,23 @@ button.topic { cursor: pointer; }
 .footer__word em .fw-l { padding-right: .02em; }
 .footer__word { cursor: default; }
 
-/* ---------- Page transition: a clean indigo wipe ----------
-   The apricot panels are gone (they flashed as blocks at the bottom of the
-   screen). Each indigo panel carries a thin apricot edge instead, so the
-   colour reads as a fine highlight line while the panels sweep. */
-.curtain__cols--gold { display: none; }
-.curtain__cols--wine i { box-shadow: inset 0 3px 0 var(--gold-light), inset 0 -3px 0 var(--gold-light); }
-.curtain.is-covering .curtain__cols--wine i:nth-child(1) { transition-delay: 0s; }
-.curtain.is-covering .curtain__cols--wine i:nth-child(2) { transition-delay: .06s; }
-.curtain.is-covering .curtain__cols--wine i:nth-child(3) { transition-delay: .12s; }
-.curtain.is-covering .curtain__cols--wine i:nth-child(4) { transition-delay: .18s; }
-.curtain.is-covering .curtain__cols--wine i:nth-child(5) { transition-delay: .24s; }
+/* ---------- Page transition: one indigo layer that fades ----------
+   No moving panels. iPhone Safari flickers when several tall layers slide
+   at once (seams and edges flash, mostly from the bottom), so the curtain
+   is a single layer that fades in, holds while the page swaps underneath,
+   then fades out. Same colour in every state, so nothing jumps. */
+.curtain__cols { display: none !important; }
+.curtain, .curtain.is-covered, .pt-enter .curtain:not(.is-leaving) { background: radial-gradient(90% 70% at 50% 100%, #34296c 0%, var(--wine) 55%, var(--wine-2) 100%); }
+.curtain { opacity: 0; visibility: hidden; transform: translateZ(0); backface-visibility: hidden; will-change: opacity; transition: opacity .45s ease, visibility 0s linear .45s; }
+.curtain.is-covering, .curtain.is-covered { opacity: 1; visibility: visible; transition: opacity .45s ease, visibility 0s; }
+.pt-enter .curtain { opacity: 1; visibility: visible; transition: none; }
+.pt-enter .curtain.is-leaving { opacity: 0; visibility: hidden; transition: opacity .65s ease .05s, visibility 0s linear .75s; }
+.curtain.no-anim { transition: none !important; }
+.curtain.is-covering .curtain__label { transition: opacity .4s ease .15s, transform .7s var(--ease) .15s !important; }
+.curtain.is-covering .curtain__bar i { transition: transform .7s cubic-bezier(.65, 0, .35, 1) .2s; }
+.pt-enter .curtain.is-leaving .curtain__label { opacity: 0; transform: translateY(-16px); transition: opacity .4s ease, transform .6s var(--ease) !important; }
+/* First-visit loader leaves with the same fade */
+.preloader { will-change: opacity; transform: translateZ(0); }
 
 /* Header: when hidden, clear the screen completely (incl. under the iPhone
    status bar / notch) and fade out, so no edge of the bar can peek through. */
