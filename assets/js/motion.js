@@ -226,7 +226,7 @@
       if (hv) mm.add("(min-width: 1025px)", function () {
         var o = { trigger: hv, start: "top top", end: "bottom top", scrub: true };
         if (giant) gsap.to(giant, { xPercent: -14, ease: "none", scrollTrigger: o });
-        if (heroRise) gsap.to(heroRise, { yPercent: 8, scale: 1.04, ease: "none", scrollTrigger: Object.assign({}, o) });
+        /* Jane stays planted on the hero's bottom edge; depth comes from the text and cards. */
         gsap.to($$(".hv__left", root), { y: -60, ease: "none", scrollTrigger: Object.assign({}, o) });
         gsap.to($$(".hv__right, .hv__proof", root), { y: -110, ease: "none", scrollTrigger: Object.assign({}, o) });
       });
